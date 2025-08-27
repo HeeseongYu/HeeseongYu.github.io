@@ -1,0 +1,96 @@
+/* 매출 현황 */
+.analytics{margin-bottom: 40px;}
+.analytics_con{display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px;}
+.analytics_top{ display: flex; justify-content: space-between; align-items: center;}
+.analytics_top h3{font-size: 1.3rem; font-weight: 500;}
+.analytics_count{color: #757575;}
+.analytics_count data{font-size: 1.1rem; font-weight: 500;}
+.analytics_bottom{ margin: 40px 0 10px 0; text-align: right;}
+.analytics_bottom data{font-size: 2rem;}
+.order a,.purchase a,.refund a{position: relative;}
+.order a::after{content: ''; display: block; width: 50px; height: 50px; position: absolute; bottom: 0; left: 0; background: url(../img/analytics_cart.svg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+.purchase a::after{content: ''; display: block; width: 40px; height: 50px; position: absolute; bottom: 0; left: 0; background: url(../img/analytics_coin.svg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+.refund a::after{content: ''; display: block; width: 50px; height: 50px; position: absolute; bottom: 0; left: 0; background: url(../img/analytics_refund.svg); background-size: contain; background-position: center; background-repeat: no-repeat;}
+
+/* 콘텐츠 하단 */
+.card_con_bottom{display: flex; gap: 30px;}
+.card_con_left,.card_con_right{flex: 1; display: flex; flex-direction: column; gap: 40px; }
+
+/* 콘텐츠 하단 좌측 */
+/* 주문배송현황 */
+.purchaseStatus{width: 100%; display: flex; justify-content: stretch; gap: 0;}
+.purchaseStatus ul{flex: 1;}
+.purchaseStatus ul li{display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;}
+.purchaseStatus ul li h4{padding-right: 40px; word-break: keep-all;}
+.purchaseStatus_count data{font-weight: bold; color: #757575;}
+.purchaseStatus_count span{text-align: right; color: #757575;}
+.middle_line{display: block; width: 1px; height: inherit; margin: 0 20px; background-color: #ddd;}
+
+/* 이벤트 프로모션 진행 현황 */
+.eventStatus{display: flex;  justify-content: space-around; align-items: center; gap: 30px;}
+.eventStatus h4{font-size: 1.1rem; margin-bottom: 10px;}
+
+/* 도넛그래프 */
+.donutGraph{
+    --size: 180px; /*도넛 크기*/
+    --thickness: 50px; /*도넛 두께*/
+    
+    width: var(--size);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(90deg);
+    
+    /* 1%당 3.6도로 이루어진 n%의 각도를 변수로 선언 */
+    --a: calc(var(--e1) * 1%);
+    --b: calc((var(--e1) + var(--e2)) * 1%);
+
+    /* a,a~b,b로 나누어진 각 각도의 그라디언트 */
+    background: conic-gradient(
+    var(--c1) 0 var(--a),
+    var(--c2) var(--a) var(--b),
+    var(--c3) var(--b) 100%);
+}
+.donutGraph::after{content: ''; position: absolute; inset: var(--thickness); border-radius: 50%; background-color: #ffffff;}
+
+.event_period span{font-weight: 500; color: #757575;}
+.event_period{margin-bottom: 15px;}
+.event_percentage ul li{display: flex; gap: 30px; align-items: center; margin-bottom: 10px;}
+.event_percentage h5{display: flex; align-items: center; gap: 8px; font-size: 1rem;}
+.event_percentage ul li h5::before{ content: ''; display: block; width: 12px; height: 12px; background-color: #CC5500;}
+.event_percentage ul li:nth-child(2) h5::before{background-color: #FF9050;}
+.event_percentage ul li:last-child h5::before{background-color: #FFD280;}
+.event_progress{color: #757575;}
+.event_progress data{font-weight: 500;}
+
+/* 콘텐츠 하단 우측 */
+/* 공지사항 */
+.notice{padding: 20px 30px;}
+.notice ul li{display: flex; align-items: center; gap: 20px; padding: 5px 0; border-bottom: 1px solid #ddd;}
+.notice ul li a{flex: 1 1 0; width: 0; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: 500;}
+.notice ul li span{margin-left: auto; color: #D17B49; font-size: 0.8rem;}
+
+/* 우측 하단 */
+.task_online_con{display: flex; gap: 20px; align-items: stretch;}
+.task .content_title h3 a,.online .content_title h3 a{display: flex; align-items: center; font-size: 1.1rem;}
+.task .content_title h3 a::after,.online .content_title h3 a::after{width: 13px; height: 13px;}
+
+/* 실시간 업무 공유 */
+.task{flex: 1;}
+.task_con{margin-bottom: 10px;}
+.task .content_title .online .online .content_title{margin-bottom: 10px;}
+.task_head,.task_bottom li{display: flex; justify-content: space-between;}
+.task_head{margin-bottom: 10px; border-bottom: 1px solid #ddd;}
+.task_head h4{font-size: 1.1rem;}
+.task_head .task_count data,.task_head .task_count span{font-size: 1rem; color: #D17B49;}
+.task_count{margin-bottom: 5px;}
+.task_bottom .task_count data,.task_bottom .task_count span{color: #757575;}
+.task_bottom h5{font-weight: 300;}
+
+/* 접속 관리자 목록 */
+.online{flex: 1.2;}
+.online_con{height: 180px; overflow-y: scroll; padding-right: 5px;}
+.online_con li{display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px;}
+.userName p:first-of-type{font-size: 0.9rem; font-weight: 500;}
+.userName p:last-of-type{font-size: 0.8rem; font-weight: 300; color: #5F6368;}
+.online_con li span{font-size: 0.65rem; color: #5F6368;}

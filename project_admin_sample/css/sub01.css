@@ -1,0 +1,28 @@
+.content_mainTitle{margin-bottom: 50px;}
+.order_con .content_title{width: 100%; display: flex; justify-content: space-between;}
+.order_edit{display: flex; align-items: center; gap: 5px;}
+.order_e{width: 24px; height: 24px; background: url(../img/edit_g.svg);} 
+.order_d{width: 24px; height: 24px; background: url(../img/delete_g.svg); background-position: center;}
+.order_con{display: flex; flex-direction: column; align-items: center; margin-bottom: 50px;}
+.order_table {width: 100%; min-width: 760px; margin-bottom: 30px; border-collapse: collapse; overflow-x: scroll;}
+.order_table .content_title{margin-bottom: 30px;}
+.order_table thead {background-color: #ddd;}
+.order_table th{font-weight: 500;}
+.order_table th, .order_table td{padding: 10px; text-align: center; border-bottom: 1px solid #ddd;}
+.order_table tr{height: 60px;}
+.order_table tr.hiddenRow{display: none;}
+.order_table td{font-size: 0.9rem;}
+.order_table tbody.hidden{display: none;}
+
+input{accent-color: #757575; cursor: pointer;}
+.product_img {display: flex; align-items: center; gap: 10px;}
+.product_img img {width: 50px; height: 50px; object-fit: cover; border-radius: 5px;}
+.product_img span:hover a,.orderNum:hover a{text-decoration:underline;}
+.purchase_cmplt,.purchase_wait,.purchase_cancel{padding: 3px 5px; border-radius: 5px; font-size: 0.8rem;}
+.purchase_cmplt{color: darkgreen; background-color: rgb(189, 255, 189); border: 1px solid rgb(0, 100, 0);}
+.purchase_wait{color: orangered; background-color:rgb(255, 220, 139); border: 1px solid orangered;}
+.purchase_cancel{color: darkred; background-color:rgb(255, 144, 144); border: 1px solid darkred;}
+.more{display: flex; justify-content: center; align-items: center; gap: 5px; width: 200px; padding: 10px 20px;border: 1px solid #757575;}
+.more:hover{background-color: #ddd;}
+.more::after{content: ''; display: block; width: 15px; height: 15px; background: url(../img/Plus.svg); background-size:15px 15px; background-position: center; background-repeat: no-repeat;}
+.more.active::after{content: ''; display: block; width: 15px; height: 15px; background: url(../img/Minus.svg); background-size: 15px 15px; background-position: center; background-repeat: no-repeat;}

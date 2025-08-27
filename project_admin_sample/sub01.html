@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/sub01.css">
+    <!-- script -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>ADMIN_sample_order</title>
+</head>
+<body>
+    <div class="admin_wrap">
+        <div class="inner">
+            <div class="sideBar">
+                <header class="sideBar_header"><a href="index.html">ADMIN_sample</a></header>
+                <div class="sideBar_menu_wrap">
+                    <div class="sideBar_menu_con">
+                        <h2 class="menuTitle">Management</h2>
+                        <ul class="sideBar_menu">
+                            <li>
+                                <button class="menu_home" onclick=" location.href='index.html'">
+                                    <img src="img/home.svg" alt="대시보드" aria-hidden="true">
+                                    <span>대시보드</span>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="img/shoppingBag.svg" alt="상품 관리" aria-hidden="true">
+                                    <span>상품 관리</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">상품 등록/수정/삭제</a></li>
+                                    <li><a href="#">재고 관리</a></li>
+                                    <li><a href="#">카테고리/옵션 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="img/cart.svg" alt="주문·결제 관리" aria-hidden="true">
+                                    <span>주문·결제 관리</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="sub01.html">주문 목록</a></li>
+                                    <li><a href="#">결제 내역</a></li>
+                                    <li><a href="#">환불·취소 처리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="img/smile.svg" alt="회원 관리" aria-hidden="true">
+                                    <span>회원 관리</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">회원 목록</a></li>
+                                    <li><a href="#">회원 등급 관리</a></li>
+                                    <li><a href="#">포인트·적립금 내역</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sideBar_menu_con">
+                        <h2 class="menuTitle">Service</h2>
+                        <ul class="sideBar_menu">
+                            <li>
+                                <button>
+                                    <img src="img/edit.svg" alt="리뷰·문의" aria-hidden="true">
+                                    <span>리뷰·문의</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">상품 리뷰 관리</a></li>
+                                    <li><a href="#"> Q&A/FAQ 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="img/gift.svg" alt="이벤트·프로모션" aria-hidden="true">
+                                    <span>이벤트·프로모션</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">이벤트 등록/수정/삭제</a></li>
+                                    <li><a href="#">쿠폰·할인 코드 발급</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="img/headphone.svg" alt="CS처리" aria-hidden="true">
+                                    <span>CS처리</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">교환/반품 접수</a></li>
+                                    <li><a href="#">클레임 관리</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sideBar_menu_con">
+                        <h2 class="menuTitle">Collaboration</h2>
+                        <ul class="sideBar_menu">
+                            <li>
+                                <button>
+                                    <img src="img/users.svg" alt="접속자 현황" aria-hidden="true">
+                                    <span>접속자 현황</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">접속 관리자 목록</a></li>
+                                    <li><a href="#">상태 표시</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="img/chat.svg" alt="어드민 챗" aria-hidden="true">
+                                    <span>어드민 챗</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">1:1채팅</a></li>
+                                    <li><a href="#">그룹 채팅</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="img/bell.svg" alt="공지·알림 센터" aria-hidden="true">
+                                    <span>공지·알림 센터</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">공지사항 등록/수정/삭제</a></li>
+                                    <li><a href="#">긴급 알림 발송</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="img/folder.svg" alt="업무 공유·자료실" aria-hidden="true">
+                                    <span>업무 공유·자료실</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">업무 할당·진행 현황</a></li>
+                                    <li><a href="#">공용 자료실/버전 관리</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sideBar_menu_con">
+                        <h2 class="menuTitle">Settings</h2>
+                        <ul class="sideBar_menu">
+                            <li>
+                                <button>
+                                    <img src="img/setting.svg" alt="계정·권한 설정" aria-hidden="true">
+                                    <span>계정·권한 설정</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">관리자 계정 관리</a></li>
+                                    <li><a href="#">권한 그룹 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="img/lock.svg" alt="보안 설정" aria-hidden="true">
+                                    <span>보안 설정</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">2단계 인증</a></li>
+                                    <li><a href="#">IP 접근 제한</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="img/card.svg" alt="결제 수단 설정" aria-hidden="true">
+                                    <span>결제 수단 설정</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">결제수단 연동</a></li>
+                                    <li><a href="#">무통장 계좌 관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <button>
+                                    <img src="img/data.svg" alt="데이터 관리" aria-hidden="true">
+                                    <span>데이터 관리</span>
+                                </button>
+                                <ul class="sideBar_menu_sub">
+                                    <li><a href="#">데이터 백업/복구</a></li>
+                                    <li><a href="#">로그 이력 조회</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="admin_content">
+                <header class="content_header">
+                    <div class="searchBox">
+                        <input class="search" type="search" placeholder="Search">
+                        <button class="searchBtn"></button>
+                    </div>
+                    <div class="profile_con">
+                        <button class="profile_notice thumb"></button>
+                        <button class="profile thumb"></button>
+                        <button class="profile_name">Heeseong Yu</button>
+                        <div class="profile_drop">
+                            <ul>
+                                <li><a href="#">프로필 수정</a></li>
+                                <li><a href="#">계정 연결 관리</a></li>
+                                <li><a href="#">알림 설정</a></li>
+                                <li><a href="#">버전 정보</a></li>
+                                <li><a href="#">로그아웃</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+                <section>
+                    <div class="content_mainTitle">
+                        <h1>주문 목록</h1>
+                        <div class="breadCrumb">
+                            <span><a href="index.html">Home</a></span>
+                            <span></span>
+                            <span><a href="#">주문·결제 관리</a></span>
+                            <span></span>
+                            <span><a href="sub01.html">주문 목록</a></span>
+                        </div>
+                    </div>
+                    <div class="order_main">
+                        <div class="order_common order_con">
+                            <div class="content_title">
+                                <h1>일반 주문</h1>
+                                <div class="order_edit">
+                                    <button class="order_e"></button>
+                                    <button class="order_d"></button>
+                                </div>
+                            </div>
+                            <table class="order_table">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" class="select_all"></th>
+                                        <th>상품</th>
+                                        <th>주문번호</th>
+                                        <th>결제상태</th>
+                                        <th>플랫폼</th>
+                                        <th>결제방법</th>
+                                        <th>결제일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">무선 헤드폰 블루투스 5.2</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cmplt">결제완료</span></td>
+                                        <td>네이버페이</td>
+                                        <td>신용카드</td>
+                                        <td>2025-08-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">USB-C 충전기</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_wait">결제대기</span></td>
+                                        <td>카카오페이</td>
+                                        <td>계좌이체</td>
+                                        <td>2025-08-09</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">모션 데스크 120x60</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cancel">결제취소</span></td>
+                                        <td>토스</td>
+                                        <td>토스페이</td>
+                                        <td>2025-08-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">무선 헤드폰 블루투스 5.2</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cmplt">결제완료</span></td>
+                                        <td>네이버페이</td>
+                                        <td>신용카드</td>
+                                        <td>2025-08-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">USB-C 충전기</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_wait">결제대기</span></td>
+                                        <td>카카오페이</td>
+                                        <td>계좌이체</td>
+                                        <td>2025-08-09</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">모션 데스크 120x60</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cancel">결제취소</span></td>
+                                        <td>토스</td>
+                                        <td>토스페이</td>
+                                        <td>2025-08-08</td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="hidden">
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">무선 헤드폰 블루투스 5.2</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cmplt">결제완료</span></td>
+                                        <td>네이버페이</td>
+                                        <td>신용카드</td>
+                                        <td>2025-08-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">USB-C 충전기</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_wait">결제대기</span></td>
+                                        <td>카카오페이</td>
+                                        <td>계좌이체</td>
+                                        <td>2025-08-09</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">모션 데스크 120x60</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cancel">결제취소</span></td>
+                                        <td>토스</td>
+                                        <td>토스페이</td>
+                                        <td>2025-08-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">무선 헤드폰 블루투스 5.2</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cmplt">결제완료</span></td>
+                                        <td>네이버페이</td>
+                                        <td>신용카드</td>
+                                        <td>2025-08-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">USB-C 충전기</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_wait">결제대기</span></td>
+                                        <td>카카오페이</td>
+                                        <td>계좌이체</td>
+                                        <td>2025-08-09</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">모션 데스크 120x60</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cancel">결제취소</span></td>
+                                        <td>토스</td>
+                                        <td>토스페이</td>
+                                        <td>2025-08-08</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="more">더보기</button>
+                        </div>                 
+                        <div class="order_family order_con">
+                            <div class="content_title">
+                                <h1>자사몰 주문</h1>
+                                <div class="order_edit">
+                                    <button class="order_e"></button>
+                                    <button class="order_d"></button>
+                                </div>
+                            </div>
+                            <table class="order_table">
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" class="select_all"></th>
+                                        <th>상품</th>
+                                        <th>주문번호</th>
+                                        <th>결제상태</th>
+                                        <th>플랫폼</th>
+                                        <th>결제방법</th>
+                                        <th>결제일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">무선 헤드폰 블루투스 5.2</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cmplt">결제완료</span></td>
+                                        <td>네이버페이</td>
+                                        <td>신용카드</td>
+                                        <td>2025-08-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">USB-C 충전기</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_wait">결제대기</span></td>
+                                        <td>카카오페이</td>
+                                        <td>계좌이체</td>
+                                        <td>2025-08-09</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">모션 데스크 120x60</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cancel">결제취소</span></td>
+                                        <td>토스</td>
+                                        <td>토스페이</td>
+                                        <td>2025-08-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">무선 헤드폰 블루투스 5.2</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cmplt">결제완료</span></td>
+                                        <td>네이버페이</td>
+                                        <td>신용카드</td>
+                                        <td>2025-08-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">USB-C 충전기</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_wait">결제대기</span></td>
+                                        <td>카카오페이</td>
+                                        <td>계좌이체</td>
+                                        <td>2025-08-09</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">모션 데스크 120x60</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cancel">결제취소</span></td>
+                                        <td>토스</td>
+                                        <td>토스페이</td>
+                                        <td>2025-08-08</td>
+                                    </tr>
+                                </tbody>
+                                <tbody class="hidden">
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">무선 헤드폰 블루투스 5.2</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cmplt">결제완료</span></td>
+                                        <td>네이버페이</td>
+                                        <td>신용카드</td>
+                                        <td>2025-08-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">USB-C 충전기</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_wait">결제대기</span></td>
+                                        <td>카카오페이</td>
+                                        <td>계좌이체</td>
+                                        <td>2025-08-09</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">모션 데스크 120x60</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cancel">결제취소</span></td>
+                                        <td>토스</td>
+                                        <td>토스페이</td>
+                                        <td>2025-08-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">무선 헤드폰 블루투스 5.2</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cmplt">결제완료</span></td>
+                                        <td>네이버페이</td>
+                                        <td>신용카드</td>
+                                        <td>2025-08-10</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">USB-C 충전기</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_wait">결제대기</span></td>
+                                        <td>카카오페이</td>
+                                        <td>계좌이체</td>
+                                        <td>2025-08-09</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" class="select_item"></td>
+                                        <td class="product_img">
+                                            <img src="https://placehold.co/50x50?text=product" alt="상품 썸네일">
+                                            <span><a href="#">모션 데스크 120x60</span></a>
+                                        </td>
+                                        <td class="orderNum"><a href="#">ORD-20250810-0032</a></td>
+                                        <td><span class="purchase_cancel">결제취소</span></td>
+                                        <td>토스</td>
+                                        <td>토스페이</td>
+                                        <td>2025-08-08</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="more">더보기</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</html>

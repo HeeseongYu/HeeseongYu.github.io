@@ -1,0 +1,1086 @@
+html{
+    scroll-behavior: smooth;
+}
+/* header */
+header{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 20%);
+    z-index: 99999;
+    box-sizing: border-box;
+}
+header>.center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    align-content: center;
+}
+#logo{
+    width: 150px
+}
+#logo a{
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+}
+header #logo img{
+    width: 100%;
+}
+nav{
+    width: 50%;
+}
+nav ul{
+    font-weight: 300;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li a{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+header nav ul li::after{
+    content: '';
+    display: block;
+    position: relative;
+    width: 0%;
+    height: 1px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ff7676;    
+    /* border-bottom: 1px solid #999; */
+    transition: 0.3s;  
+}
+header nav ul li:hover::after{
+    width: 100%; 
+}
+/* banner */
+#main-banner h2{
+    display: none;
+}
+.mainBanner-slide{
+    width: 100%;
+    overflow: hidden;
+}
+.mainBanner-slide img{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 0;
+}
+#main-banner>img{
+    width: 100%;
+}
+/* brand */
+#brand{
+    display: block;
+    background-image: url(../img/moodBlur.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5% 0;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.brand-title{
+    width: 100%;
+    color: #fff;
+    box-sizing: border-box;
+}
+.brand-title h2{
+    font-family: 'NanumMyeongjo';
+    font-size: 30px;
+    margin:20px 0;
+}
+.brand-title p{
+    font-size: 20px;
+    font-weight: 300;
+}
+.brand-title .brandArrow{
+    display: inline-block;
+    margin-top: 30px;
+    width:5%;
+    animation: vertic_move 1s ease-in-out infinite;
+}
+.brand-title img{
+    width: 100%;
+}
+@keyframes vertic_move{
+    0%{transform:translateY(0px)}
+    50%{transform:translateY(20px)}
+    100%{transform:translateY(0px)}
+}
+
+/* video */
+#video{
+    text-align: center;
+    width: 100%;
+    background-image: url(../img/videoBG.jpg);
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+#video .video-title{
+    margin: 80px 0;
+}
+#video .video-title h2{
+    font-family: 'NanumMyeongjo';
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+#video .video-title p{
+    font-size: 18px;
+}
+#iframe{
+    width:90%; 
+    min-height:619px;
+    margin-bottom: 200px;
+}
+
+/* product */
+#product{
+    text-align: center;
+    line-height: 0;
+}
+#product>.center{
+    overflow: hidden;
+}
+#product .product-title{
+    margin: 80px 0;
+}
+#product .product-title h2{
+    margin-bottom: 20px;
+}
+#product .product-title i{
+    display: block;
+    margin: 30px 0 10px 0;
+}
+#product .product-title img{scale: 0.7;}
+#product article{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px;
+    opacity: 1;
+    background: linear-gradient(to top,#e8e8e8 10%,transparent);
+}
+#product article:nth-of-type(even){
+    flex-direction: row-reverse;
+}
+#product article .product-category{
+    display:block;
+}
+#product article .product-category img{
+    max-width:600px;
+    width: 100%;
+}
+#product article ul{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+#product article:nth-of-type(2) ul, 
+#product article:nth-of-type(3) ul{
+    display: block;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#product article ul li{
+    display: block;
+    width: 50%;
+    float: left;
+    margin-top: 30px;
+}
+#product article:nth-of-type(2) ul li, 
+#product article:nth-of-type(3) ul li{
+    width: 100%;
+}
+#product article.double ul li>img{
+    width: 60%;
+}
+#product article:nth-of-type(2) ul li>img{
+    width: 60%;
+    max-width: 420px;
+}
+#product article:nth-of-type(3) ul li>img{
+    width: 100%;
+    max-width: 300px;
+}
+#product article:last-of-type ul li>img{
+    width: 80%;
+    max-width: 300px;
+}
+#product article ul li .product-name p{
+    line-height: 1.5em;
+    margin: 10px 0;
+}
+#product article ul li .product-name .product-color{
+    height: 18px;
+}
+
+/* look */
+#look{
+    background: url(../img/lookBG1Opacity.png);
+    background-size: cover;
+    background-position: center ;
+    padding-bottom: 120px ;
+}
+#look h2{
+    margin: 60px 0;
+}
+#look article{
+    width: 100%;
+    height: 700px;
+    display: flex;   
+    justify-content:space-between ;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+#look article .look-toggle{
+    width: fit-content;
+    position: relative;
+    cursor: pointer;
+}
+#look article .look-toggle:first-child{
+    align-self: flex-start;
+}
+#look article .look-toggle:nth-child(2){
+    align-self: center;
+}
+#look article .look-toggle:last-child{
+    align-self: flex-end;
+}
+#look article .look-toggle .lookThumb-on{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#look article .look-toggle .lookThumb>img,
+#look article .look-toggle .lookThumb-on>img{
+    width: 100%;
+}
+#look article .look-toggle .lookThumb .look-textbox,
+#look article .look-toggle .lookThumb-on .look-textbox{
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: 94%;
+    padding: 8%;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 70%);
+}
+#look article .look-toggle .lookThumb-on .look-textbox{
+    font-size: 18px;
+    text-align: left;
+}
+#look article .look-toggle .lookThumb .look-textbox h3{
+    font-family: 'NanumMyeongjo';
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+/* lookTumb-on */
+#look article .look-toggle .lookThumb-on{
+    display: none;
+    transition: all 0.3s;
+}
+
+#look article .look-toggle .lookThumb-on .look-textbox h3::after{
+    content: '';
+    display: inline-block;
+    width: 90%;
+    height: 1px;
+    background-color: #707070;
+    margin-bottom: 10px;
+}
+#look article .look-toggle .lookThumb-on .look-textbox h3{
+    font-family: 'NanumMyeongjo';
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+}
+#look article .look-toggle .lookThumb-on .look-textbox ul li{
+    margin-bottom: 10px;
+    font-size: 16px;
+    word-break: keep-all;
+}
+.look-textbox>img{scale:0.8;}
+
+/* lookText */
+#look .lookText{
+    display: inline-block;
+    font-family: 'NanumMyeongjo';
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#look .lookText h4{
+    font-size: 28px;
+    margin-bottom:15px;
+}
+#look .lookText p{
+    font-size: 20px;
+    margin:0 0 10px 40px;
+}
+#look .lookText p:last-child{
+    margin-left: 80px;
+    word-break: keep-all;
+}
+
+/* store */
+#store h2{margin-bottom:0px;}
+#store article{
+    width:100%;
+    padding: 10% 0;
+    margin-bottom: 200px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+#store article .store-thumb{
+    display: inline-block;
+    position: relative;
+    width: 40%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+#store article .store-thumb img{
+    display: block;
+    width: 100%;
+}
+#store article .store-textbox{
+    z-index: -999;
+    display: inline-block;
+    width: 42%;
+    height: 450px;
+    position: relative;
+    top: 100px;
+    left: -50px;
+    padding: 6% 4% 2% 7%;
+    background-color: #ECECEC;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+#store .store-textbox>div{
+    text-align: left;
+    font-size:20px;
+    font-weight: 300;
+}
+.store-textbox h3{
+    font-family: 'NanumMyeongjo';
+    font-size: 22px ;
+    font-weight: normal;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+
+}
+.store-textbox .store-list{margin-bottom: 50px;}
+.store-textbox .store-list li{margin-bottom: 10px;}
+#store article .store-textbox>div .map{
+    display: block;
+    text-align: right;
+    font-size: 16px;
+}
+#store article .store-textbox>div .map a:hover{
+    color: #ff7676;
+    transition: 0.3s;
+}
+.store-textbox .map i{
+    vertical-align: sub;
+    color:#ff7676;
+}
+
+/* storeBanner */
+.storeBanner{
+    width: 100%;
+    background-image: url(../img/storeBannerBG.png);
+    background-size: cover;
+    background-position-y: 100%;
+    padding: 20px 0;
+}
+.storeBanner .storeBannerContent{
+    position: relative;
+    height: 320px;
+    padding-top: 50px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 30px;
+    box-sizing: border-box;
+}
+.storeBannerContent .storeBannerText p{
+    font-family:'NanumMyeongjo';
+    font-size: 20px;
+}
+.storeBannerContent .storeBannerText h3{
+    margin-bottom: 15px;
+}
+.storeBannerLogo{
+    width: 100%;
+    padding: 0 20%;
+    box-sizing: border-box;
+}
+.storeBannerLogo img{
+    width: 100%;
+}
+
+.storeBannerContent>p{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #9c9c9b;
+    font-size: 14px;
+}
+
+/* review */
+#review{
+    background-color: #fff;
+    margin-bottom: 100px;
+}   
+#review .reviewMainTitle{
+    text-align: center;
+    margin-bottom: 50px;
+}
+#review .reviewMainTitle h2{
+    margin-bottom: 50px;
+}
+.reviewMainTitle .hashtag{
+    font-family: 'NanumMyeongjo';
+    font-size: 20px;
+    display: inline-block;
+    color: #707070;
+}
+
+.review-slide{
+    position: relative;
+}
+.mySwiper{
+    height: auto;
+}
+.swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.swiper-button-prev,
+.swiper-button-next{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    color: #9c9c9b;
+}
+
+.swiper-button-prev{
+    left: -80px;
+}
+.swiper-button-next{
+    right: -80px;
+}
+
+
+.review-content{
+    display: inline-block;
+    width: 80%;
+    border: 1px solid lightgray;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 10px 8px 5px rgba(0, 0, 0, 30%);
+}
+.review-content .review-thumb{
+    width: 100%;
+}
+.review-content .review-thumb img{
+    width:100%;
+    border: 1px solid lightgray;
+}
+.review-text{
+    text-align: left;
+}
+.review-text .review-title::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+    margin: 5px 0;
+}
+.review-text .review-title .star{
+    color:rgb(255, 204, 77);
+}
+.review-text .review-summary{
+    display: block;
+    width: 100%;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* mainSiteBanner */
+.mainSiteLink{
+    width: 100%;
+    height: 160px;
+    color: #fff;
+    background-color: #9c9c9b;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+.mainSiteLink .mainSiteLink-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.mainSiteLink .mainSiteLink-text span{
+    margin-left: -40px;
+}
+.mainSiteLink .mainSiteLink-text img{
+    scale: 0.5;
+    margin-left: -35px;
+}
+.mainSiteLink button{
+    width: 70%;
+    max-width: 400px;
+    padding: 1% 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 20%);
+    cursor: pointer;
+    color: #707070;
+}
+.mainSiteLink button i{
+   vertical-align: sub;
+   margin-left:5px;
+   font-size:30px;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    background-color: #e8e8e8;
+    color: #9c9c9b;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    width:100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.footerLogoImg{
+    width: 30%;
+}    
+.footerLogoImg>img{
+    width:100%
+}
+.footer-textbox{
+    width: 70%;
+    font-size: 16px;
+}
+.company,.footer-info{
+    display: inline-block;
+    margin-bottom: 3px;
+}
+.footer-info li{ float: left;}
+.footer-info li::after{
+    content: '|';
+    margin: 0 5px;
+}
+.footer-info li:last-child::after{display: none;}
+
+.copyright{
+   font-size: 13px;
+   font-weight: bold;
+}
+.footer-button{
+    display:inline-block;
+    width: 100%;
+    margin-top: 5px;
+}
+.footer-button button{
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid lightgray;
+    background-color: #fff;
+    color:#707070 ;
+    cursor: pointer;
+}
+.footer-sns{
+    display: inline-block;
+    margin-top:10px;
+}
+.footer-sns li{float: left;}
+.footer-sns li a,
+.footer-sns li img{display: block;}
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+
+
+@media screen and (max-width:1280px){
+    .review-slide{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:1200px){
+    #look article{
+        flex-direction: column;
+        width: 100%;
+        height: inherit;
+        align-items: center;
+        margin-bottom: 80px;
+    }
+    #look article .look-toggle:first-child,
+    #look article .look-toggle:nth-child(2),
+    #look article .look-toggle:last-child{
+        align-self: auto;
+        margin-bottom: 40px;
+    }
+}
+@media screen and (max-width:1080px){
+    /* brand */
+    #brand {margin-top: 18px;}
+    @keyframes vertic_move{
+        50%{transform:translateY(15px)}
+    }
+    /* product */
+    #product article{
+        display: block;
+        flex-direction: column;
+        justify-content: unset;
+        margin-bottom: 150px;
+    }
+    #product article:nth-of-type(even){
+        flex-direction: column;
+    }
+    #product article .product-category{
+        margin: 0 auto;
+        width: 35%;
+    }
+    #product article ul{
+        padding: 50px 0;
+        width: 80%;
+    }
+    #product article ul li{
+        display: inline-block;
+        width: 50%;
+        margin-top: 0;
+    }
+    #product article.double ul li>img{
+        width: 65%;
+    }
+    #product article.double:last-child ul li>img{
+       width: 100%; 
+    }
+    #product article:nth-of-type(2) ul li>img{
+        margin-top: 0px;
+        width: 50%;
+    }
+    #product article:nth-of-type(3) ul li>img{
+        width: 80%;
+    }
+    #product article:last-of-type ul li>img{
+        margin-top: 0px;
+        width: 50%;
+    }
+    /* store */
+    #store article{
+        width:100%;
+        padding: 10% 0;
+        margin-bottom: 20px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    #store article .store-thumb{
+        float: none;
+        position: static;
+        right: 0;
+        display: inline-block;
+        width: 80%;
+        max-width: 550px;
+        border-radius: 25px 25px 0 0 ;
+    }
+    #store article .store-textbox{
+        z-index: -999;
+        display: inline-block;
+        float: none;
+        width: 80%;
+        max-width: 550px;
+        height: auto;
+        position: static;
+        top: 0;
+        left: 0;
+        padding: 3% 5%;
+        background-color: #ECECEC;
+        box-sizing: border-box;
+        border-radius: 0 0 25px 25px;
+    }
+    #store .store-textbox>div{font-size:28px;}
+     #store article .store-textbox>div ul li{font-size: 20px;}
+    
+    /* review */
+    #review .reviewMainTitle .hashtag{
+        font-size: 18px;
+    } 
+    .swiper-button-prev{
+        left: -35px;
+    }
+    .swiper-button-next{
+        right: -35px;
+    }
+}
+
+
+/* tablet */
+@media screen and (max-width:768px){
+    .center{
+        max-width: 698px;
+        height: inherit;
+        margin: 0 auto;
+    }
+    #product, #look, #store,#review{
+        padding-top: 60px;
+    }
+    #topButton{
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        bottom: 10px;
+        right: 10px;
+    }
+    #topButton i{
+        font-size: 40px;
+    }
+    /* header */
+    header{
+        padding: 5px;
+        height: 130px;
+    }
+    header>.center{
+        justify-content: unset;
+        flex-direction: column;
+    }
+    #logo{
+        margin-bottom: 10px;
+    }
+    nav{
+        width: 100%;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    /* mainBanner */
+    #main-banner{
+        padding-top: 120px;
+    }
+    .mainBanner-slide img{
+        top: 130px;
+    }
+    /* brand */
+    #brand{margin-top: 7px;}
+    .brand-title h2{
+        font-size: 28px;
+        margin: 10px 0;
+    }
+    .brand-title p{font-size: 18px;}
+    .brand-title .brandArrow{margin-top: 15px;}
+    
+    /* video */
+    #video .video-title h2{font-size: 36px;}
+    /* look */
+    #look{
+        position: relative;
+        height: inherit;
+        padding-bottom: 80px;
+    }
+    #look article{margin-bottom: 20px;}
+    #look .lookText {
+        text-align: center;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    #look .lookText h4{
+        font-size: 28px;
+        margin-bottom:10px;
+    }
+    #look article .look-toggle .lookThumb-on .look-textbox h3 {
+        font-size: 24px;
+    }
+    #look .lookText p{
+        font-size: 24px;
+        margin:0;
+        word-break: keep-all;
+    }
+    #look .lookText p:last-child{
+        display: inline-block;
+        width: 90%;
+        margin-left: 0;
+    }
+    /* storeBanner */
+    .storeBanner .storeBannerContent{
+        position: relative;
+        height: 200px;
+        padding: 20px 0;
+        box-sizing: border-box;
+        background-color: #fff;
+        text-align: center;
+        font-size: 22px;
+    }
+    .storeBannerContent .storeBannerText h3 {
+        margin-bottom: 10px;
+    }
+    .storeBannerContent .storeBannerText p{
+        font-size: 18px;
+    }
+    .storeBannerContent>p{
+        bottom: 10px;
+        color: #9c9c9b;
+        font-size: 12px;
+    }
+    .storeBannerLogo{
+        margin-top: 15px;
+    }
+    /* review */
+    #review .reviewMainTitle .hashtag{
+        font-size: 20px;
+    } 
+    #review .reviewMainTitle .hashtag li>span{
+        display: block;
+        margin-bottom: 6px;
+    }
+    /* footer */
+    .footer-textbox{
+        font-size: 14px;
+    }    
+}
+
+
+/* mobile */
+@media screen and (max-width:500px){
+    .brand-title h2{font-size: 24px;}
+    #video .video-title h2 {font-size: 32px;}
+}
+@media screen and (max-width:390px){
+    .center{
+        height: inherit;
+        margin: 0 auto;
+    }
+    #topButton{
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        bottom: 8px;
+        right: 8px;
+    }
+    #topButton i{
+        font-size: 40px;
+    }
+
+    /* header */
+    header{padding: 5px;}
+    #logo{
+        width: 150px
+    }
+    #logo a{   
+        padding: 5px;
+    }
+    /* mainBanner */
+
+    /* brand */
+    #brand{
+        box-sizing: border-box;
+        margin-top: 5px;
+        padding-top: 30px;
+    }
+    .brand-title h2{
+        font-size: 18px;
+        margin-bottom:5px;
+    }
+    .brand-title p{
+        font-size: 14px;
+    }
+    .brand-title .brandArrow{
+        margin-top: 0px;
+    }    
+    @keyframes vertic_move{
+        50%{transform:translateY(8px)}
+    }
+    /* video */
+    #video{
+        padding-top: 80px;
+    }
+    #video .video-title{
+        margin: 0 0 50px;
+    }
+    #video .video-title h2 {
+        margin-top: 0px;
+        font-size: 22px;
+    }
+    #video .video-title p{
+        font-size: 16px;
+    }
+    /* product */
+    #product article{
+        display: block;
+        flex-direction: column;
+        justify-content: unset;
+        margin-bottom: 80px;
+    }
+    #product article:last-of-type{
+        margin-bottom: 0px;
+    }
+    #product article:nth-of-type(even){
+        flex-direction: column;
+    }
+    #product article .product-category{
+        margin: 0 auto;
+        width: 60%;
+    }
+    #product article ul{
+        padding: 50px 0 0 0;
+        width: 100%;
+    }
+    #product article ul li{
+        display: inline-block;
+        width: 100%;
+        float: none;
+        margin-top:0;
+        margin-bottom: 50px;
+    }
+    #product article.double ul li>img{
+        width: 60%;
+    }
+    #product article.double:last-child ul li>img{
+       width: 70%; 
+    }
+    #product article:nth-of-type(2) ul li>img{
+        margin-top: 0px;
+        width: 80%;
+    }
+    /* look */
+    #look article {
+        padding: 15% 15% 0 15%;
+        box-sizing: border-box;
+    }
+    #look article .look-toggle .lookThumb-on .look-textbox{
+        font-size: 16px;
+    }
+    #look article .look-toggle .lookThumb-on .look-textbox h3{
+        font-size: 20px;
+    }
+    #look article .look-toggle .lookThumb-on .look-textbox ul li {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+    #look .lookText h4{
+        font-size: 20px;
+    }
+    #look .lookText p{
+        font-size: 20px;
+    }
+    /* store */
+    #store article .store-thumb{width:80%;}
+    #store article .store-textbox{
+        width: 80%;
+        padding:5%;
+    }
+    .store-textbox h3{font-size: 20px;}
+    #store article .store-textbox>div ul li{font-size: 16px;}
+    #store article .store-textbox>div .map a {font-size: 14px;}
+    #store article .store-textbox>div .map a i{font-size: 18px;}
+    /* storeBanner */
+    .storeBanner .storeBannerContent{
+        padding-top: 40px;
+        font-size: 18px;
+    }
+    .storeBannerContent .storeBannerText p{font-size: 16px;}
+    /* look */
+    #look{margin-top: 50px;}
+    #look .lookText{
+        width: 100%;
+        text-align: center;
+    }
+    /* review */
+    #review{padding-top:60px}
+    #review .reviewMainTitle{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    #review .reviewMainTitle h2{margin-bottom: 50px;}
+    #review .reviewMainTitle .hashtag{font-size: 20px;}
+    .review-slide {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+     display: none;
+    }
+
+    /* mainSiteLink */
+    .mainSiteLink .mainSiteLink-text span{font-size: 16px;}
+    .mainSiteLink button{
+        max-width: 250px;
+        font-size: 14px;
+    }
+    .mainSiteLink button i{
+        margin-left:0;
+        font-size:24px;
+    }
+    /* footer */
+    .footerLogoImg{
+        display: none;
+    }
+    .footer-textbox{
+        text-align: center;
+        width: 100%;
+        font-size: 12px;
+    }
+    .footer-info{width: 100%;}
+    .footer-info li{float: none;}
+    .copyright{font-size: 12px;}   
+}
+
+
+

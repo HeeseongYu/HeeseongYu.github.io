@@ -1,0 +1,61 @@
+*{margin: 0; padding: 0;}
+@font-face{
+    font-family: 'NanumMyeongjo';
+    src: url(../fonts/NanumMyeongjo.woff);
+}
+@font-face{
+    font-family: 'Montserrat-Regular';
+    src: url(../fonts/Montserrat-Regular.woff);
+}
+body,html{
+    font-family: 'Noto Sans KR','NanumMyeongjo','Montserrat-Regular',sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+.wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+ul{list-style: none;}
+a{
+    text-decoration: none;
+    color: #333;
+}
+.center{
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    height: inherit;
+    margin: 0 auto;
+}
+#main-banner, #video, #product, #look, #store,#review{
+    width: 100%;
+    padding-top: 60px;
+    text-align: center;
+}
+article>h3{display: none;}
+h2{
+    font-family: 'Montserrat-Regular';
+    margin: 60px 0;
+    font-size: 28px;
+    font-weight: 400;
+}
+#topButton{
+    color: rgba(112, 112, 112, 80%);
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border: 4px solid;
+    border-radius:60px ;
+    background-color:transparent;
+    opacity: 50%;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    cursor: pointer;
+    display: none;
+}
+#topButton i{
+    color: rgb(112, 112, 112, 80%);
+    font-size: 60px;
+}
