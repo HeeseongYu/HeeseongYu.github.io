@@ -37,16 +37,16 @@ $(document).ready(function () {
     });
     
     // gnb 드롭다운
-    // $(".gnb .sub,.dropDown_con").hover(function () {
-    //     const idx = $(this).index()
-    //     $(".header_template").addClass("headerScroll hoverTxt");
-    //     $(".dropDown_con").eq(idx).stop().slideDown("fast");
-    // }, function () {
-    //     if ($(window).scrollTop() === 0) {
-    //         $(".header_template").removeClass("headerScroll hoverTxt");
-    //     }
-    //     $(".dropDown_con").stop().slideUp("fast");
-    // });
+    $(".gnb .sub,.dropDown_con").hover(function () {
+        const idx = $(this).index()
+        $(".header_template").addClass("headerScroll hoverTxt");
+        $(".dropDown_con").eq(idx).stop().slideDown("fast");
+    }, function () {
+        if ($(window).scrollTop() === 0) {
+            $(".header_template").removeClass("headerScroll hoverTxt");
+        }
+        $(".dropDown_con").stop().slideUp("fast");
+    });
 
 
     // 오른쪽 gnb의 드롭다운 요소들에 할당된 호버와 클릭 함수를 한 데 묶어 반응형 적용 시 제어하기   
@@ -176,50 +176,14 @@ $(document).ready(function () {
             });
         }  
     };
-
-    // ================================================
-    // PC/모바일별 상단 GNB 드롭다운 분기 (기존 클래스/이름 그대로 사용)
-    function bindGnbDropdownByViewport() {
-        var isMobile = $(window).width() <= 1024;
-
-        // 우측 GNB가 열린 채 남아있을 수 있으므로 정리
-        $(".gnb_right_drop_con").stop(true, true).slideUp(0);
-        $(".gnb_right > ul > li").removeClass("on");
-        $(".header_template").removeClass("keyInfoHover");
-
-        // 기존 hover 바인딩 제거 (중복 방지)
-        $(".gnb .sub, .dropDown_con").off("mouseenter mouseleave");
-
-        if (isMobile) {
-            // 모바일: 상단 GNB hover 동작 비활성 + 드롭다운 닫기
-            $(".dropDown_con").stop(true, true).hide();
-        } else {
-            // PC: hover로 열고 벗어나면 닫기 (index 매칭 유지)
-            $(".gnb .sub, .dropDown_con").hover(function () {
-                var idx = $(this).index();
-                $(".header_template").addClass("headerScroll hoverTxt");
-                $(".dropDown_con").stop(true, true).hide();
-                $(".dropDown_con").eq(idx).stop(true, true).slideDown("fast");
-            }, function () {
-                $(".dropDown_con").stop(true, true).slideUp("fast");
-                if ($(window).scrollTop() === 0) {
-                    $(".header_template").removeClass("headerScroll hoverTxt");
-                }
-            });
-        }
-    }
-
-
     // 화면 리사이즈 감지 후 실행
     keyInfoResponsive();
-    bindGnbDropdownByViewport();
     let resizeTimer;
 
     $(window).on("resize", function () {
         clearTimeout(resizeTimer);        
         resizeTimer = setTimeout(() => {
             keyInfoResponsive();
-            bindGnbDropdownByViewport();
         }, 150);
     });
 
