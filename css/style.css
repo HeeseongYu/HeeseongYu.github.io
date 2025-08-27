@@ -101,21 +101,6 @@ header .logo a img{width: 100%;}
 .portfolioInfo ul li strong::after{content:':'; margin: 0 5px;}
 .portfolioInfo ul li .storyBoard:hover{color:#FF7262; text-decoration: underline;}
 
-/* workSec */
-#workSec{box-sizing: border-box; padding: 100px 0;}
-#workSec .workTitle{margin-bottom: 100px; text-align: center;}
-#workSec .workTitle span, #workSec .workTitle strong{display: block; font-size: 1.4rem;}
-#workSec .workTitle strong{font-size: 1rem;}
-#workSec .workTitle h2{font-size: 2rem; word-break: keep-all;}
-#workSec .workTitle h2::after{margin: 5px auto; content: ''; display: block; width: 30%; height: 3px; background-color: #F8B62C;}
-
-.workCon{display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: 1fr 1fr; gap: 10px;}
-.workCon div{overflow: hidden;}
-.workCon div:first-of-type{grid-row: 1/3; grid-column: 1;}
-.workCon div:nth-of-type(2){grid-row: 1; grid-column: 2;}
-.workCon div:last-of-type{grid-row: 2; grid-column: 2;}
-.workCon div img{display: block; width: 100%;}
-
 /* mid-banner */
 .mid-banner{display: flex; justify-content: center; align-items: center; width: 100%; height: 150px; background-color: black;}
 .eyes{display: flex; justify-content: space-between; width: 160px;}
@@ -292,11 +277,6 @@ footer .inner{position: relative; height: inherit;}
 
     /* portfolioSec */
     .portfolioWrap{grid-template-columns: 1fr;}
-
-    /* workSec */
-    #workSec .workTitle span{font-size: 1.2rem;}
-    #workSec .workTitle h2{font-size: 1.8rem;}
-    #workSec .workTitle strong{font-size: 0.8rem;}
     
     /* aboutMeSec */    
     /* profileCard */
@@ -338,9 +318,6 @@ footer .inner{position: relative; height: inherit;}
     .introElipse7{width: 120px; height: 120px;}
     .introElipse8{display: none;}
     .introElipse9{width: 200px; height: 200px;}
-
-    /* workSec */
-    #workSec .workTitle h2{font-size: 2rem;}
 
     /* profileCard */
     .profileCard{border-radius: 50px; padding: 50px;}
@@ -405,9 +382,6 @@ footer .inner{position: relative; height: inherit;}
     .portfolioInfo h5{font-size: 1.1rem;} 
     .portfolioInfo ul li{font-size: 0.9rem;}
     
-    /* workSec */
-    #workSec .workTitle h2{font-size: 1.5rem;}
-
     /* mid-banner */
     .eyes{width: 120px;}
     .eyes .eye img{width: 12px;}
