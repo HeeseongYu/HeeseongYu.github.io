@@ -1,41 +1,41 @@
 $(document).ready(function () {
-
-    $(window).on("scroll", function () {
+    
+    $(window).on("scroll", function () { 
         const scrollTop = $(window).scrollTop();
         const winHeight = $(window).height();
         const docHeight = $(document).height();
         const scrollBottom = docHeight - (scrollTop + winHeight);
-        const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100
-
+        const scrollPercent = (scrollTop/(docHeight - winHeight)) * 100
+        
         //헤더 색변경
         if (scrollTop > 0) {
             $(".header_template").addClass("headerScroll hoverTxt");
         } else {
             $(".header_template").removeClass("headerScroll hoverTxt");
-        }
-
+        } 
+        
         // 프로그레스바
         $(".progressBar").css("width", scrollPercent + "%");
 
         // Top Button
         // 페이드인아웃
-        if (scrollTop > 80) {
+       if (scrollTop > 80) {
             $(".topBtn").fadeIn();
-        } else {
+        } else{
             $(".topBtn").fadeOut();
-        }
+        } 
         // 하단위치고정
-        if (scrollBottom < 300) {
-            $(".topBtn").addClass("fixed");
+       if (scrollBottom < 300) {
+           $(".topBtn").addClass("fixed");
         } else {
-            $(".topBtn").removeClass("fixed");
-        }
+            $(".topBtn").removeClass("fixed");            
+       }
     });
-    $(".topBtn").click(function () {
-        $("html,body").animate({ scrollTop: 0 }, 500);
+    $(".topBtn").click(function () { 
+        $("html,body").animate({scrollTop : 0},500);
         return false;
     });
-
+    
     // gnb 드롭다운
     $(".gnb .sub,.dropDown_con").hover(function () {
         const idx = $(this).index()
@@ -58,7 +58,7 @@ $(document).ready(function () {
         let hideTimer;
 
         // 기존 이벤트 초기화
-        $(".hana_network_btn, .language_btn, .menuAll_btn, .menuAll_close, .gnb_right_drop_con").off();
+        $(".hana_network_btn, .language_btn, .menuAll_btn, .menuAll_close, .gnb_right_drop_con").off();      
         $(".key_info_btn, .key_info_close, .key_info_con").off();
         $(".key_info_con").removeAttr("style").hide();  // display none
         $(".footer_customerInfo").removeAttr("style");  // display none 제거
@@ -70,25 +70,25 @@ $(document).ready(function () {
             // 푸터 리스트 토글 초기화
             $(".footer_customerInfo").hide();
             $(".footer_li button").removeClass("customerInfo_toggle");
-
+            
             // 하나키인포 클릭
-            $(".key_info_btn").click(function () {
+            $(".key_info_btn").click(function () { 
                 $(".key_info_con").stop().css("display", "block");
                 // transition 적용 시간 부여
                 setTimeout(() => {
                     $(".key_info_con").css("left", "0");
                 }, 10);
                 $("body").addClass("scroll_lock");
-            });
+            });   
             $(".key_info_close").click(function () {
                 $(".key_info_con").stop().css("left", "100%");
                 // left 이동 후 display 제거
                 setTimeout(() => {
                     $(".key_info_con").css("display", "none");
-                }, 300);
+                }, 300); 
                 $("body").removeClass("scroll_lock");
             });
-
+            
             // 모바일 전체메뉴 슬라이드
             $(".menuAll_btn").on('click', function () {
                 $(".m_menuAll").addClass('m_menuAll_slide');
@@ -103,14 +103,14 @@ $(document).ready(function () {
             $(".language_btn").on('click', function () {
                 $(".language_list ul").stop().slideToggle("fast");
             });
-
+           
             // 모바일 전체메뉴 내 탭 활성화
-            $(".menuAll_tab ul li").click(function () {
+            $(".menuAll_tab ul li").click(function () { 
                 const tabNum = $(this).index();
-
+                
                 $(".menuAll_tab > ul > li").removeClass("active");
                 $(this).addClass("active")
-
+                
                 $(".menuAll_tab_list").hide();
                 $(".menuAll_tab_list").eq(tabNum).show();
             });
@@ -122,8 +122,8 @@ $(document).ready(function () {
                 $(this).parents().toggleClass("tabDown");
                 $(this).next().stop().slideToggle();
                 siblings.removeClass("tabDown").children(".tab_down_ul").slideUp();
-            });
-            // PC
+            }); 
+        // PC
         } else {
 
             // 하나키인포 호버
@@ -174,14 +174,14 @@ $(document).ready(function () {
                 $(".menuAll_con").removeClass('menuAll_down');
                 $("body").removeClass("scroll_lock");
             });
-        }
+        }  
     };
     // 화면 리사이즈 감지 후 실행
     keyInfoResponsive();
     let resizeTimer;
 
     $(window).on("resize", function () {
-        clearTimeout(resizeTimer);
+        clearTimeout(resizeTimer);        
         resizeTimer = setTimeout(() => {
             keyInfoResponsive();
         }, 150);
@@ -193,7 +193,7 @@ $(document).ready(function () {
         $(".footer_li button").stop().toggleClass("customerInfo_toggle");
         $(".footer_customerInfo").stop().slideToggle("fast");
     });
-
+    
     // 새로고침 이후에도 스크롤 위치 반영하여 헤더 투명화 방지
     $(window).trigger("scroll");
 });
