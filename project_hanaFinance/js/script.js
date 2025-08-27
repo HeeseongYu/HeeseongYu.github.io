@@ -177,64 +177,49 @@ $(document).ready(function () {
         }  
     };
 
-    // ===================== Responsive GNB hover binding (desktop only) =====================
-    function isMobileWidth() { return $(window).width() <= 1024; }
+    // ================================================
+    // PC/모바일별 상단 GNB 드롭다운 분기 (기존 클래스/이름 그대로 사용)
+    function bindGnbDropdownByViewport() {
+        var isMobile = $(window).width() <= 1024;
 
-    function setupDesktopGnb() {
-        teardownMobileGnb();
-        teardownDesktopGnb();
+        // 우측 GNB가 열린 채 남아있을 수 있으므로 정리
+        $(".gnb_right_drop_con").stop(true, true).slideUp(0);
+        $(".gnb_right > ul > li").removeClass("on");
+        $(".header_template").removeClass("keyInfoHover");
 
-        $(".gnb .sub, .dropDown_con")
-            .on("mouseenter.gnbHover", function () {
-                const idx = $(this).index();
+        // 기존 hover 바인딩 제거 (중복 방지)
+        $(".gnb .sub, .dropDown_con").off("mouseenter mouseleave");
+
+        if (isMobile) {
+            // 모바일: 상단 GNB hover 동작 비활성 + 드롭다운 닫기
+            $(".dropDown_con").stop(true, true).hide();
+        } else {
+            // PC: hover로 열고 벗어나면 닫기 (index 매칭 유지)
+            $(".gnb .sub, .dropDown_con").hover(function () {
+                var idx = $(this).index();
                 $(".header_template").addClass("headerScroll hoverTxt");
+                $(".dropDown_con").stop(true, true).hide();
                 $(".dropDown_con").eq(idx).stop(true, true).slideDown("fast");
-            })
-            .on("mouseleave.gnbHover", function () {
+            }, function () {
                 $(".dropDown_con").stop(true, true).slideUp("fast");
                 if ($(window).scrollTop() === 0) {
                     $(".header_template").removeClass("headerScroll hoverTxt");
                 }
             });
-    }
-
-    function teardownDesktopGnb() {
-        $(".gnb .sub, .dropDown_con").off(".gnbHover");
-        $(".dropDown_con").stop(true, true).hide();
-        if ($(window).scrollTop() === 0) {
-            $(".header_template").removeClass("hoverTxt");
         }
     }
 
-    function setupMobileGnb() {
-        teardownDesktopGnb();
-        $(".dropDown_con").stop(true, true).hide();
-        $(".gnb .sub, .dropDown_con").off(".gnbHover");
-        // 모바일 네비게이션은 keyInfoResponsive()의 클릭 로직을 사용
-    }
-
-    function teardownMobileGnb() {
-        // 필요 시 모바일 전용 네임스페이스 이벤트 해제
-    }
-
-    function applyResponsiveGnb() {
-        if (isMobileWidth()) {
-            setupMobileGnb();
-        } else {h 
-            setupDesktopGnb();
-        }
-    }
 
     // 화면 리사이즈 감지 후 실행
     keyInfoResponsive();
-    applyResponsiveGnb();
+    bindGnbDropdownByViewport();
     let resizeTimer;
 
     $(window).on("resize", function () {
         clearTimeout(resizeTimer);        
         resizeTimer = setTimeout(() => {
             keyInfoResponsive();
-            applyResponsiveGnb();
+            bindGnbDropdownByViewport();
         }, 150);
     });
 
