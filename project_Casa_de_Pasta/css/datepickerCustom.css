@@ -1,0 +1,41 @@
+.ui-widget {
+	font-family: 'Noto Sans KR',sans-serif;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: 'Noto Sans KR',sans-serif;
+}
+/* 달력 배경 */
+#ui-datepicker-div.ui-widget-content{
+	border: 1px solid #4A413F;
+	background: #f0e7e4;
+	color: #4A413F;
+}
+/* 년월표시 헤더 */
+.ui-widget-header {
+    background: #4A413F;
+	color: #ffffff;
+	font-weight: bold;
+}
+/* 선택 날짜 하이라이트 */
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #83715a;
+    background: #b7a792;
+	color: #ffffff;
+	font-weight: normal;
+}
+/* 오늘 날짜 하이라이트 */
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	border: 1px solid #83715a;
+	background: transparent;
+    color: #4A413F
+}

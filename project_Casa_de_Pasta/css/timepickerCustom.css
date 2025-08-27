@@ -1,0 +1,13 @@
+.ui-timepicker-container.ui-timepicker-no-scrollbar.ui-timepicker-standard{
+    /* height: 150px!important; */
+    padding: 0;
+    border: 1px solid #4A413F;
+    border-radius: 0 0 4px 4px;
+}
+.ui-timepicker-container.ui-timepicker-no-scrollbar.ui-timepicker-standard > div>ul>li>a{
+    font-size: 0.8rem;
+}
+.ui-timepicker-container .ui-widget-content{
+    background-color: #b7a792;
+    border-radius: 0px;
+}

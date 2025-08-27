@@ -1,0 +1,1059 @@
+/* main-banner */
+.main-banner{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    background-color: #221c19;
+}
+.main-banner .banner-slide img{
+    display: block;
+    position: relative;
+    min-width: 60%;
+    left: 50%;
+    transform:translate(-50%) ;
+}
+.banner-textbox{
+    position: absolute;
+    bottom:10%;
+    right: 10%;
+    max-width: 420px;
+    background-color: rgba(255, 255, 255, 80%);
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 0 40px ;
+    text-align: center;
+}
+.banner-textbox h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #632810;
+}
+.banner-textbox h2::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #BB8B78;
+    margin: 10px 0;
+}
+.banner-textbox>span{
+    font-family: 'Noto Sans KR';
+    font-size:1.68rem;
+}
+
+/* main-menu */
+#menuSection{
+    padding: 100px;
+    box-sizing: border-box;
+    background-image: url(../img/bgCanvas.png);
+    background-size: cover;
+}
+#menuSection .center{
+    max-width: 110vmin;
+    margin: 0 auto;
+}
+#menuSection h2{
+    display: none;
+}
+.main-menuThumb{
+    position: relative;
+    left: 0;
+    width: 35%;
+    height: max-content;
+    height: auto;
+    border-radius: 225px 0 0 0;
+    background-image: url(../img/menuBg.jpg);
+    background-position: top 50% right 30%;
+    background-size: cover;
+}
+.main-menuThumb h3{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #3E400F;
+}
+#menuSection .menuSection-menu{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    box-sizing: border-box;
+    margin: 0 auto 50px;
+}
+#menuSection .menuSection-menu ul {
+    max-width: 64%;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    justify-content: space-around;
+}
+#menuSection .menuSection-menu ul li{
+    position: relative;
+    width: 48%;
+    background-color: #ffffff;
+    box-shadow: 2px 1px 3px rgba(51, 44, 44, 0.2);
+    padding: 10px;
+    box-sizing: border-box;
+}
+#menuSection .menuSection-menu ul li:first-child,
+#menuSection .menuSection-menu ul li:nth-child(2){
+    margin-bottom: 20px;
+}
+#menuSection li img{ width:100%;}
+#menuSection .menuSection-menu ul li h4{
+    font-size: 1.2rem;   
+    margin: 5px 0;
+}
+#menuSection .menuSection-menu ul li h4::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: gray;
+    margin: 10px 0;
+}
+#menuSection .menuSection-menu ul li span,
+#menuSection .menuSection-menu ul li strong{
+    font-family: 'Noto Sans KR';
+    display: block;
+    margin: 5px 0;
+}
+#menuSection .menuSection-menu ul li span{
+    font-size: 0.96rem;
+    padding: 5px;
+    margin-bottom: 70px;
+    word-break: keep-all;
+}
+#menuSection .menuSection-menu ul li strong{
+    position: absolute;
+    bottom: 10px; 
+    right: 10px;
+    font-weight: 500;
+    font-size: 1.08rem;
+    margin-top: 30px;
+    word-break: keep-all;
+}
+
+
+/* menuSlide */
+#menuSection .menuSlide{position: relative;}
+#menuSection .menuSlide h3{display: none;}
+#menuSection .menuSlide::after{
+    z-index: 9996;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    content: '';
+    width: 22%;
+    height: 100%;
+    border-radius: 0 200px 200px 0;
+    background: linear-gradient(to right,transparent,rgba(61, 88, 66, 0.5));
+    filter: blur(2px);
+}
+.swiper1{
+    clear: both;
+    margin-bottom: 50px;
+    border-radius: 0 200px 200px 0;
+}
+.swiper-wrapper{
+    padding: 20px 0 0 0;
+}
+.swiper1 .swiper-slide{
+    text-align: center;
+}
+.swiper1 .swiper-slide div{
+    text-align: center;
+}
+.swiper1 .swiper-slide div a{
+    display: block;
+}
+.swiper1 .swiper-slide div a img{
+    max-width: 70%;
+}
+.swiper1 .swiper-slide div span{
+    display: block;
+    margin: 15px 0 20px 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* 더보기버튼 default */
+.more{box-sizing: border-box;}
+.more a{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.more a span{
+    font-family: 'Noto Sans KR';
+    font-size: 1.2rem;
+    color: #632810;
+}
+.arrow{
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid #632810;
+    border-left: 7px solid #632810;
+    border-right: 7px solid transparent;
+}
+.arrowBody{
+    width: 97%;
+    height: 2px;
+    background-color: #632810;
+}
+.more a:hover span{color: #516B55;}
+.more a:hover .arrowBody{background-color: #516B55;}
+.more a:hover .arrow{
+    border-bottom: 7px solid #516B55;
+    border-left: 7px solid #516B55;
+}
+/* 더보기버튼 default */
+.menuSlide>.more{
+    float: right;
+    min-width: 150px;
+}
+
+/* eventslide */
+.swiper2{
+    max-width: 100%;
+    height: 350px;
+    min-height: 350px;
+    clear: both;
+}
+.swiper2 .swiper-wrapper{padding: 0;}
+.swiper2 .swiper-wrapper .swiper-slide{
+    display: inline-block;
+    position: relative;
+    font-family: 'Noto Sans KR';
+    color: #ffffff;
+    padding: 0;
+}
+.swiper2 .swiper-wrapper .swiper-slide .center .eventbanner-textbox{
+    position: absolute;
+    top: 0;
+    right: 15%;
+    width: 18%;
+    min-width:250px;
+    height: 350px;
+    max-height: 350px;
+    background-color: rgba(28, 29, 12, 0.8);
+    text-align: center;
+}
+.swiper2 .swiper-wrapper .swiper-slide .center .eventbanner-textbox div{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%)
+}
+.swiper2 .swiper-wrapper .swiper-slide .center .eventbanner-textbox h3{
+    font-family: 'Trajan-Pro';
+    font-size: 2.8rem;
+}
+.swiper2 .swiper-wrapper .swiper-slide .center .eventbanner-textbox div span:first-of-type{
+    display: block;
+    font-size: 1rem;
+    font-weight: lighter;
+    word-break: keep-all;
+}
+.swiper2 .swiper-wrapper .swiper-slide .center .eventbanner-textbox div span:first-of-type::after{
+    display:block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+    background-color: #ffffff;
+}
+.swiper2 .swiper-wrapper .swiper-slide .center .eventbanner-textbox div span:nth-of-type(2){
+    font-size: 1.2rem;
+    word-break: keep-all;
+}
+.swiper2 .swiper-wrapper .swiper-slide .center .eventbanner-textbox div span:last-of-type{
+    display: block;
+    margin-top: 15px;
+    font-size: 0.8rem;
+}
+
+
+/* membership */
+#membership{
+    padding: 100px 0 150px;
+    background-image: url(../img/bgCanvas.png);
+    background-size: cover;
+    position: relative;
+}
+#membership .center{
+    position: relative;
+    text-align: center;
+}
+#membership article{
+    position: relative;
+
+}
+#membership .membershipTitle{
+    margin: 0 auto;
+    position: relative;
+    width: 350px;
+    height: 105px;
+    margin-bottom: 45px;
+}
+.membershipTitle>img{
+    width: 100%;
+}
+.membershipTitle>div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 324px;
+    text-align: center; 
+} 
+.membershipTitle>div h2{
+    font-size: 1.7rem;
+}
+.membershipTitle>div span{font-family: 'Noto Sans KR';}
+.membership-contents{
+    position: relative;
+    width: 540px;
+    height: 630px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    background-image: unset;
+    border: 3px solid #632810;
+    box-sizing: border-box;
+}
+.membership-contents::after{
+    display: block;
+    content: '';
+    width: 560px;
+    height: 610px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid #632810;
+    box-sizing: border-box;
+}
+.innercontents{
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.innercontents .benefits{min-width: 100%;}
+.innercontents .benefits>li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid lightgray;
+    font-size: 1rem;
+}
+.innercontents .benefits>li>div{max-width: 25%;}
+.innercontents .benefits>li>div>img{width: 100%;}
+.innercontents .benefits>li:first-child>div>img{width: 90%;}
+.innercontents .benefits>li>ul{
+    min-width: 55%;
+}
+.innercontents .benefits>li>ul>li{
+    font-family: 'Noto Sans KR';
+    text-align: left;
+    word-break: keep-all;
+    font-size: 1rem;
+
+}
+.innercontents .benefits>li>ul>li h3{
+    font-family: 'Trajan-Pro'; 
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.innercontents button{
+    width: 250px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: #516B55 ;
+    color: #ffffff;
+    font-size: 1.32rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 55px;
+}
+.membership-contents button:hover{
+    background-color: #632810 ;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+#membership article>.more{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 205px;
+    box-sizing: border-box;
+    text-align: left;
+    clear: both;
+    margin-top: 25px;
+}
+ 
+
+
+
+/* store */
+#storeSection{
+    padding: 80px 0;
+    clear: both;
+    background-color: #f0e7e4;
+}
+#storeSection .storeTitle{
+    position: relative;
+    width: 250px;
+    height: 70px;
+    margin: 30px auto 50px;
+    text-align: center;
+}
+#storeSection h3{display: none;}
+#storeSection .storeTitle img{
+    width: 100%;
+}
+#storeSection .storeTitle h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+}
+#storeSection article{
+    position: relative;
+    width: 100%;
+    padding: 0 80px 80px 60px;
+    box-sizing: border-box;
+}
+.store-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    clear: both;
+}
+.store-list li{
+    position: relative;
+    width: 33%;
+    margin-bottom: 5px;
+}
+.store-list li a img{
+    display: block;
+    width: 100%;
+}
+.store-list li a .storeName{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 35%;
+    background:linear-gradient(to top,rgba(0,0,0,80%) 60%,transparent);
+    transition: 0.3s ease-in-out;  
+}
+.store-list li a:hover .storeName{
+    height: 60%;
+    background:linear-gradient(to top,rgba(81,107,85,80%) 60%,transparent);    
+}
+.store-list li a .storeName span{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Noto Sans KR';    
+    color: #ffffff;
+    transition: 0.3s ease-in-out;  
+}
+.store-list li a:hover .storeName span{
+    font-size: 1rem;
+}
+#storeSection article>.more{
+    clear: both;
+    position: absolute;
+    right: 80px;
+    width: 180px;
+    margin: 20px 0;
+}
+
+/* rollingBanner */
+.rollingBanner { 
+    display: flex; 
+    width: 100%;
+    height: 90px;
+    background-image: url(../img/rollingBanner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 30% center;
+    overflow: hidden;
+}
+.rollingBanner .rolling-list ul { 
+    display: flex;
+    margin-right: 1570px;
+    
+}
+.rollingBanner .rolling-list ul li {  
+    display: flex; 
+    flex-shrink: 0; 
+    margin: 0 15px;
+    line-height: 95px;
+    font-size: 3.75rem;
+    font-weight: bold;  
+    color: #ffffff;
+}
+.rollingBanner .rolling-list ul li:nth-child(even){
+    align-self: center;
+    width: 100px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #ffffff;
+}
+/* animation */
+.rolling-list.original {
+	animation: rollingleft1 40s linear infinite;
+}
+.rolling-list.clone {
+	animation: rollingleft2 40s linear infinite;
+}
+
+@keyframes rollingleft1 {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(-100%); }
+	50.01% { transform: translateX(100%); }
+	100% { transform: translateX(0); }
+}
+
+@keyframes rollingleft2 {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-200%); }
+}
+
+/* reservation */
+#reservationSection{
+    width: 100%;
+    position: relative;
+    background: rgba(0, 0, 0, 60%);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box; 
+}
+#reservationSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/reservationBg.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+    z-index: -1; 
+}
+#reservationSection article{
+    text-align: center;
+    display: inline-block;
+    padding: 150px 0;
+    max-width: 465px;
+}
+#reservationSection article .reservationTitle{
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height: 108px;
+    text-align: center;
+}
+#reservationSection h2{display: none;}
+#reservationSection .reservationTitle img{
+    width: 100%;
+}
+#reservationSection .reservationTitle h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+.reservationForm{
+    margin-top: 60px;
+    max-width: 100%;
+}
+#name,#tel, #datepicker_box, #timepicker_box, #people_box{
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid #ffffff;    
+    box-shadow: none;   
+    color: #ffffff;
+    caret-color: #ffffff;
+    outline: none;
+    padding: 10px ;
+    font-family: 'Noto Sans KR';
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#name::placeholder,
+#tel::placeholder,
+textarea::placeholder{
+    color: #ffffff;
+}
+.formLine1{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.formLine1 #name{
+    float: left;
+    width: 35%;
+}
+.formLine1 #tel{
+    float: right;
+    width: 62%;
+}
+#name:focus::-webkit-input-placeholder,#tel:focus::-webkit-input-placeholder{color:transparent}
+
+.formLine2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    clear: both;
+}
+.formLine2 #datepicker_box,
+.formLine2 #timepicker_box,
+.formLine2 #people_box{
+    width: 32.333%;
+    cursor: pointer;
+    padding: 0;
+}
+#datepicker_box #datepicker, #timepicker_box .timepicker, #people_box button{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    font-family: 'Noto Sans KR';
+    color: #ffffff;  
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+}
+/* ˇ 아이콘 */
+#timepicker_box::after, #people_box>button::after{
+    content: 'ˇ';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    line-height: 25px; 
+    text-align: center;
+    pointer-events: none;
+}
+/* datepicker 커스텀 */
+    #datepicker{position: relative;}
+    .ui-widget{font-family: 'Noto Sans KR',sans-serif;}
+    
+    /* 달력 배경 */
+    #ui-datepicker-div.ui-widget-content{
+        margin-top: 2px;
+        border: 1px solid #4A413F;
+        background: #f0e7e4;
+        color: #4A413F;
+    }
+    /* 년월표시 헤더 */
+    .ui-widget-header {
+        background: #4A413F;
+        color: #ffffff;
+        font-weight: normal;
+    }
+    /* 선택 날짜 하이라이트 */
+    .ui-state-active,.ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active,
+    a.ui-button:active,.ui-button:active,
+    .ui-button.ui-state-active:hover {
+        border: 1px solid #83715a;
+        background: #b7a792;
+        color: #ffffff;
+        font-weight: normal;
+    }
+    /* 오늘 날짜 하이라이트 */
+    .ui-state-highlight,
+    .ui-widget-content .ui-state-highlight,
+    .ui-widget-header .ui-state-highlight {
+        border: 1px solid #83715a;
+        background: transparent;
+        color: #4A413F
+    }
+/* datepicker 커스텀 */
+
+/* timepicker 커스텀 */ 
+    .ui-timepicker-container{
+        display: none;
+        padding: 0;
+        margin-top: 2px;
+        border: 1px solid #4A413F;
+        border-radius: 0 0 4px 4px;
+    }
+    
+    .ui-timepicker-container>div>ul>li>a{font-size: 0.8rem;}
+    .ui-timepicker-container .ui-widget-content{
+        background-color: #b7a792;
+        border-radius: 0px;
+    }    
+/* timepicker 커스텀 */
+
+#people_box{
+    position: relative;
+    font-size: 0.8rem;
+}
+#people_box button{
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+#people_box #people{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    margin-top: 2px;
+    text-align: center;
+    background-color: #b7a792;
+    border:1px solid #4A413F;
+    box-sizing: border-box;
+    border-radius: 0 0 4px 4px;
+    display: none;
+}
+#people_box #people li{
+    padding: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+#people_box #people li:hover{
+    color: #4A413F;
+    background-color: #ffffff;
+}
+
+textarea{
+    box-sizing: border-box;
+    width: 100%;
+    height: 280px;
+    margin-top: 40px;
+    padding: 15px;
+    border: none;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 35%);
+    color: #ffffff;
+    caret-color: #ffffff;
+    font-family: 'Noto Sans KR';
+    resize: none;
+    outline: none;
+}
+/* 커서 활성화 시 placeholder 사라지게 */
+textarea:focus::-webkit-input-placeholder {color:transparent;}
+#reservationSection article>button{
+    width: 320px;
+    height: 56px;
+    margin-top: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: #632810 ;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#reservationSection article>button:hover{
+    background-color:  #B7A792;
+}
+
+
+
+
+
+
+/* mediaQuery */
+
+/* tablet */
+@media screen and  (max-width:900px){
+    /* banner */
+    .main-banner .banner-slide img{
+        width: 90%;
+    }
+    .banner-textbox{
+        width: 350px;
+        max-width: 350px;
+        padding: 30px;
+    }
+    .banner-textbox h2{
+        font-size: 1.5rem;
+    }
+    .banner-textbox>span{
+        font-size:1.2rem;
+    }
+
+    /* menu */
+    #menuSection .center{
+        position: relative;
+    }
+    #menuSection .menuSection-menu{
+        display: unset;
+        justify-content: unset;
+        align-items: unset;
+        box-sizing: unset;
+        margin: 0 0 50px 0;
+        width: 100vw;
+    }
+    .main-menuThumb{
+        min-width: 100%;
+        min-height: 250px;
+        border-radius: 120px 120px 0 0;
+        margin-bottom: 10px;
+        background-position: top 50% right 50%;
+    }
+    #menuSection .menuSection-menu ul {
+        max-width: 100%;
+        justify-content: space-around;
+        margin-bottom: 25px;
+    }
+    #menuSection .menuSection-menu ul li:last-of-type{margin: 0;}
+    #menuSection .menuSection-menu ul li h4{word-break: keep-all;}
+   
+    /* eventbanner */
+    .swiper2{
+        height: 300px;
+        min-height: 300px;
+    }
+    .swiper2  .swiper-wrapper .swiper-slide img{
+        max-width: fit-content;
+        height: 300px;
+    }
+    .swiper2  .swiper-wrapper .swiper-slide .center .eventbanner-textbox{max-height: 300px;}
+    .swiper2 .swiper-wrapper .swiper-slide .center .eventbanner-textbox h3{font-size: 2.5rem;}
+    
+    /* membership */
+    .membershipTitle>div h2{font-size: 1.5rem;}
+    .membership-contents{
+        width: 480px;
+        height: 570px;
+        padding-top: 100px
+    }
+    .membership-contents::after{
+        width: 500px;
+        height: 550px;
+    }
+    .innercontents{
+        width: 380px;
+    }
+    .innercontents button{
+        margin-top: 40px;
+        width: 220px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    /* store */
+    #storeSection article{
+        padding: 0 30px 60px;
+    }
+    .store-list li{
+        width: 49%;
+    }
+    .store-list li:nth-child(5),.store-list li:last-child{display: none;}
+    #storeSection article>.more{
+        right: 30px;
+        width: 150px;
+    }
+    /* reservation*/
+    #reservationSection article{
+        text-align: center;
+        display: inline-block;
+        width: 500px;
+        max-width: 500px;
+        box-sizing: border-box;
+    }
+    #reservationSection article .reservationTitle{
+        width: 300px;
+        height: 81px;
+    }
+    #reservationSection .reservationTitle h3{font-size: 2rem;}
+    #reservationSection article>button{
+        width: 280px;
+        height: 49px;
+        border-radius: 49px;
+        font-size: 1.1rem;
+    }
+}
+
+/* mobile */
+@media screen and  (max-width:600px){
+    /* main-banner */
+    .main-banner{top: 0;}
+    .main-banner .banner-slide img{width: 100%;}
+    .banner-textbox{
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 280px;
+        max-width: 280px;
+        height: fit-content;
+    }
+    .banner-textbox h2{font-size: 1.2rem;}
+    .banner-textbox h2::after{
+        height: 3px;
+        margin: 6px 0;
+    }
+    .banner-textbox>span{font-size: 1rem;}
+
+    /* menu */
+    #menuSection{
+        padding: 45px 45px 80px 45px; 
+    }
+    #menuSection .center{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .main-menuThumb{
+        background-image: url(../img/menuBg.jpg);
+        background-position: top 50% right 2%;
+        background-size: 180%;
+    }
+    #menuSection .menuSection-menu ul {
+        max-width: 100%;
+        display: block;
+        flex-wrap:unset;
+        height: unset;
+        justify-content: unset;
+    }
+    #menuSection .menuSection-menu ul li{
+        width: 80%;
+        padding: 15px;
+        margin: 0 auto 20px;
+    }
+    #menuSection .menuSection-menu ul li:last-of-type{margin: 0 auto 20px;}
+    #menuSection .menuSection-menu ul li h4{
+        text-align: center;
+        font-size:4.5vw;   
+        margin: 8px 0;
+    }
+    #menuSection .menuSection-menu ul li span{
+        font-size: 3.5vw;
+        margin-bottom: 45px;
+    }
+    #menuSection .menuSection-menu ul li strong{
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        font-size: 4vw;
+        margin: 0;
+        margin-bottom: 0;
+    }
+    #menuSection .menuSlide{position: relative; clear: both;}
+    .swiper1{
+        margin-bottom: 30px;
+    }
+    .more{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .more a span{font-size: 1rem;}
+    #menuSection .menuSlide .more{min-width: 50%;}
+   
+    /* eventslide */
+   .swiper2 .swiper-wrapper .swiper-slide .center .eventbanner-textbox{
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    .swiper2 .swiper-wrapper .swiper-slide .center .eventbanner-textbox div span:nth-of-type(2){
+        font-size: 0.9rem;
+    }
+
+    /* membership */
+    #membership .membershipTitle{
+        margin: 0 auto;
+        width: 280px;
+        height: fit-content;
+        margin-bottom: 45px;
+    }
+    .membershipTitle>div h2{font-size: 1.3rem;}
+    .membershipTitle>div span{font-size: 0.8rem;}
+    .membership-contents{
+        width: 80%;
+        height: 570px;
+    }
+    .membership-contents::after{
+        width: calc(100% + 25px);
+        height: 550px;
+    }
+    .innercontents{
+        width: calc(100% - 50px);
+    }
+    .innercontents .benefits>li{
+        width: 100%;
+        align-items: unset;
+        justify-content: unset;
+        padding: 20px 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+    .innercontents .benefits>li>div{display: none;}
+    .innercontents button{
+        width: 200px;
+        font-size: 1.1em
+    }
+    
+    /* store */
+    .store-list li{
+        position: relative;
+        display: inline-block;
+        width: 80%;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    .store-list li:nth-of-type(3),
+    .store-list li:nth-of-type(4),
+    .store-list li:last-of-type{
+        display: none;
+    }   
+    /* reservation*/
+    #reservationSection article{
+        max-width: 300px;
+        box-sizing: border-box;
+    }
+    #reservationSection .reservationTitle h3{font-size: 2rem;}
+    .formLine2 #timepicker_box .timepicker{font-size: 0.9rem;}
+    .reservationForm{
+        margin-top: 30px;
+        max-width: 600px;
+    }
+    #reservationSection article .reservationTitle{
+        width: 260px;
+        height: 70px;
+    }
+    #reservationSection .reservationTitle h3{font-size: 1.8rem;}
+    textarea {height: 180px;}
+    #reservationSection article>button{
+        width: 210px;
+        height: 45px;
+        margin-top: 30px;
+        border-radius: 45px;
+        font-size: 0.9rem;
+    }
+}

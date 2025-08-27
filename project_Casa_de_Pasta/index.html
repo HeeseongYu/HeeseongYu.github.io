@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa De PASTA</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="quickmenu">
+            <ul>
+                <li class="reservationJump">
+                    <a href="#reservationSection">
+                        <img src="img/callendar.png" alt="Callendar">
+                        <span>예약</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="alert.html">
+                        <img src="img/membership.png" alt="membership">
+                        <span>멤버십</span>
+                    </a>
+                </li>
+                <li class="top">
+                    <a href="#top">
+                        <img src="img/top.png" alt="#top">
+                        <span>TOP</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <header>
+            <div class="topheader">
+                <div class="center">
+                    <h1>
+                        <a href="index.html">
+                            <img src="img/casaDePasta.png" alt="logo">
+                        </a>
+                    </h1>
+                    <ul class="lnb">
+                        <li><a href="alert.html">로그인</a></li>
+                        <li><a href="alert.html">회원가입</a></li>
+                        <li><a href="alert.html">고객센터</a></li>
+                    </ul>
+                    <div id="hamburgerBg"></div>
+                    <div id="hamburger-wrap">
+                        <div class="ham-lnb">
+                            <ul>
+                                <li><a href="alert.html">로그인</a></li>
+                            <li><a href="alert.html">회원가입</a></li>
+                            <li><a href="alert.html">고객센터</a></li>
+                            </ul>
+                        </div>
+                        <ul class="ham-menu">
+                            <li>
+                                <a href="#none">BRAND</a>
+                                <ul class="ham-sub">
+                                    <li class="ham-subList"><a href="alert.html">BRAND STORY</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">MENU</a>
+                                <ul class="ham-sub">
+                                    <li class="ham-subList"><a href="alert.html">NEW</a></li>
+                                    <li class="ham-subList"><a href="sub01.html">파스타</a></li>
+                                    <li class="ham-subList"><a href="alert.html">피자</a></li>
+                                    <li class="ham-subList"><a href="alert.html">스테이크</a></li>
+                                    <li class="ham-subList"><a href="alert.html">사이드</a></li>
+                                    <li class="ham-subList"><a href="alert.html">음료</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">NOTICE</a>
+                                <ul class="ham-sub">
+                                    <li class="ham-subList"><a href="alert.html">이벤트</a></li>
+                                    <li class="ham-subList"><a href="alert.html">공지사항</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">BENEFIT</a>
+                                <ul class="ham-sub">
+                                    <li class="ham-subList"><a href="alert.html">멤버십</a></li>
+                                    <li class="ham-subList"><a href="alert.html">할인혜택</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none">STORE</a>
+                                <ul class="ham-sub">
+                                    <li class="ham-subList"><a href="alert.html">매장 정보</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav id="gnb">
+            <div class="center">
+                <ul class="main-menu">
+                    <li class="main-list">
+                        <a href="#none">BRAND</a>
+                        <ul class="sub-menu">
+                            <li class="sub-list"><a href="alert.html">BRAND STORY</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-list">
+                        <a href="#none">MENU</a>
+                        <ul class="sub-menu">
+                            <li class="sub-list"><a href="alert.html">NEW</a></li>
+                            <li class="sub-list"><a href="sub01.html">파스타</a></li>
+                            <li class="sub-list"><a href="alert.html">피자</a></li>
+                            <li class="sub-list"><a href="alert.html">스테이크</a></li>
+                            <li class="sub-list"><a href="alert.html">사이드</a></li>
+                            <li class="sub-list"><a href="alert.html">음료</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-list">
+                        <a href="#none">NOTICE</a>
+                        <ul class="sub-menu">
+                            <li class="sub-list"><a href="alert.html">이벤트</a></li>
+                            <li class="sub-list"><a href="alert.html">공지사항</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-list">
+                        <a href="#none">BENEFIT</a>
+                        <ul class="sub-menu">
+                            <li class="sub-list"><a href="alert.html">멤버십</a></li>
+                            <li class="sub-list"><a href="alert.html">할인혜택</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-list">
+                        <a href="#none">STORE</a>
+                        <ul class="sub-menu">
+                            <li class="sub-list"><a href="alert.html">매장 정보</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div> 
+        </nav>
+        <script>
+            window.onscroll = function () {
+                stickyFunction();
+            };
+    
+            var gnbBar = document.getElementById("gnb");
+            // console.log(gnbBar);
+            const gnbBarOffsetTop = gnbBar.offsetTop;
+            // console.log(`gnbBarOffsetTop : ${gnbBarOffsetTop}`);
+    
+            function stickyFunction() {
+                // console.log(`window.pageYOffset : ${window.pageYOffset}`);
+                if (window.pageYOffset > gnbBarOffsetTop) {
+                    gnbBar.classList.add("sticky");
+                } else {
+                    gnbBar.classList.remove("sticky");
+                }
+            }
+        </script>
+        <section class="main-banner">
+            <div class="banner-slide">
+                <img src="img/main_gif.gif" alt="mainBanner">
+                <div class="banner-textbox">
+                    <h2>BUON APPETITO!</h2>
+                    <span>소중한 사람과의 식사,<br>까사 드 파스타와 함께하세요.</span>
+                </div>
+            </div>
+        </section>
+        <section id="menuSection">
+            <h2>hiddenTitle</h2>
+            <div class="center">
+                <article class="menuSection-menu">
+                    <div class="main-menuThumb">
+                        <h3>MENU</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <div>
+                                <a href="sub01.html">
+                                    <div><img src="img/pastaThumb1.png" alt="pastaThumb1"></div>
+                                </a>
+                            </div>
+                            <h4>볼로네제 파스타</h4>
+                            <span>까사 드 파스타의 시그니처 토마토 소스와 양파, 마늘을 사용해 바질로 가니쉬한 볼로네제 파스타</span>
+                            <strong>XX,XXX원</strong>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="sub01.html">
+                                    <div><img src="img/pastaThumb2.png" alt="pastaThumb2"></div>
+                                </a>
+                            </div>
+                            <h4>바질페스토 클램 파스타</h4>
+                            <span>바질, 마늘, 치즈가 듬뿍 들어간 페스토와 구운 조개가 어우러져 향기롭고 농후한 풍미의 페스토 파스타</span>
+                            <strong>XX,XXX원</strong>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="sub01.html">
+                                    <div><img src="img/pastaThumb3.png" alt="pastaThumb3"></div>
+                                </a>
+                            </div>
+                            <h4>연어 시금치 오일 파스타</h4>
+                            <span>시금치면을 사용한 오일 파스타에 구운 연어를 곁들인 담백하고 든든한 파스타</span>
+                            <strong>XX,XXX원</strong>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="sub01.html">
+                                    <div><img src="img/pastaThumb4.png" alt="pastaThumb4"></div>
+                                </a>
+                            </div>
+                            <h4>까르보나라 파스타</h4>
+                            <span>신선한 계란과 그라나파다노 치즈를 사용해 크리미하고 고소한 까르보나라 파스타</span>
+                            <strong>XX,XXX원</strong>
+                        </li>
+                    </ul>
+                </article>
+                <article class="menuSlide">   
+                    <h3>hiddenTitle</h3>
+                    <div class="swiper mySwiper swiper1">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                              <div>
+                                    <a href="sub01.html">
+                                      <img src="img/pastaIcon.png" alt="pastaIcon">
+                                    </a>
+                                    <span>PASTA</span>
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div>
+                                    <a href="alert.html">
+                                        <img src="img/steakIcon.png" alt="steakIcon">
+                                    </a>
+                                    <span>STEAK</span>
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div>
+                                    <a href="alert.html">
+                                      <img src="img/pizzaIcon.png" alt="pizzaIcon">
+                                    </a>
+                                    <span>PIZZA</span>
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div>
+                                    <a href="alert.html">
+                                      <img src="img/sideIcon.png" alt="sideIcon">
+                                    </a>
+                                    <span>SIDE</span>
+                              </div>
+                          </div>
+                          <div class="swiper-slide">
+                              <div>
+                                    <a href="alert.html">
+                                      <img src="img/beverageIcon1.png" alt="beverageIcon">
+                                    </a>
+                                    <span>BEVERAGE</span>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="more">
+                        <a href="alert.html">
+                            <span>메뉴 더보기</span>
+                            <div class="arrow"></div>
+                            <div class="arrowBody"></div>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <div class="swiper mySwiper swiper2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                    <img src="img/wineBanner.png" alt="mid-banner1">
+                    <div class="center">
+                        <div class="eventbanner-textbox">
+                            <div>
+                                <h3>EVENT</h3>
+                                <span>와인과 함께하는 여유로운 저녁</span>
+                                <span>하우스 와인 1병 주문 시<br>살라미&치즈 플래터 무료증정</span>
+                                <span>2023.XX.XX ~ XX.XX</span>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+              <div class="swiper-slide">
+                  <img src="img/pizzaBanner.png" alt="mid-banner2">r
+                    <div class="center">
+                        <div class="eventbanner-textbox">
+                            <div>
+                                <h3>EVENT</h3>
+                                <span>LET'S HAVE PIZZA TONIGHT!</span>
+                                <span>파스타 포함 메뉴 2개 이상 주문 시<br>피자 10% 할인</span>
+                                <span>2023.XX.XX ~ XX.XX</span>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+              <div class="swiper-slide">
+                  <img src="img/pastaBanner.png" alt="mid-banner3">r
+                    <div class="center">
+                        <div class="eventbanner-textbox">
+                            <div>
+                                <h3>EVENT</h3>
+                                <span>지중해 홍합의 신선한 향기</span>
+                                <span>파스타 신메뉴 주문 시<br>음료1잔 무료증정</span>
+                                <span>2023.XX.XX ~ XX.XX</span>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        <section id="membership">
+            <div class="center">
+                <div class="membershipTitle">
+                    <img src="img/mbsTitle.png" alt="memebershipTitle">
+                    <div>
+                        <h2> MEMBERSHIP ONLY</h2>
+                        <span>까사 드 파스타 멤버십 회원에게만 드리는 혜택</span>
+                    </div>
+                </div>
+                <article>
+                    <div class="membership-contents">
+                        <div class="innercontents">
+                            <ul class="benefits">
+                                <li>
+                                    <div><img src="img/discount.png" alt="discount"></div>
+                                    <ul>
+                                        <li><h3>DISCOUNT</h3></li>
+                                        <li>- 멤버십 한정 연간 최대 20%<br>&nbsp;&nbsp;할인 적용</li>
+                                        <li>- 세트메뉴 할인권 제공</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div><img src="img/gift.png" alt="gift"></div>
+                                    <ul>
+                                        <li><h3>GIFT</h3></li>
+                                        <li>- 매월 사이드/음료 쿠폰 제공</li>
+                                        <li>- 생일 방문 시 디저트 무료 제공</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div><img src="img/coin.png" alt="coin"></div>
+                                    <ul>
+                                        <li><h3>POINT</h3></li>
+                                        <li>- 결제 금액의 2% 상시 적립</li>
+                                        <li>- 적립 포인트 교환/사용 가능</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <button>멤버십 가입하기</button>
+                        </div>
+                    </div>
+                    <div class="more">
+                        <a href="alert.html">
+                            <span>더 많은 혜택 보러가기</span>                            
+                            <div class="arrow"></div>
+                            <div class="arrowBody"></div>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="storeSection">
+            <div class="center">
+                <div class="storeTitle">
+                    <img src="img/objects.png" alt="">
+                    <h2>store</h2>
+                </div>
+                <article>
+                    <h3>hiddenTitle</h3>
+                    <ul class="store-list">
+                        <li>
+                            <a href="alert.html">
+                                <img src="img/store1.png" alt="store1">
+                                <div class="storeName"><span>마곡점</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alert.html">
+                                <div class="storeName"><span>강남점</span></div>
+                                <img src="img/store2.png" alt="store2">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alert.html">
+                                <div class="storeName"><span>성수점</span></div>
+                                <img src="img/store3.png" alt="store3">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alert.html">
+                                <img src="img/store4.png" alt="store4">
+                                <div class="storeName"><span>용산점</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alert.html">
+                                <img src="img/store5.png" alt="store5">
+                                <div class="storeName"><span>삼성점</span></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="alert.html">
+                                <img src="img/store6.png" alt="store6">
+                                <div class="storeName"><span>압구정점</span></div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="more">
+                        <a href="alert.html">
+                            <span>다른 매장 찾기</span>
+                            <div class="arrow"></div>
+                            <div class="arrowBody"></div>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <div class="rollingBanner"> 
+            <div class="rolling-list">
+                <ul>
+                    <li>BUON APPETITO a CASA DE PASTA</li>
+                    <li></li>
+                    <li>BUON APPETITO a CASA DE PASTA</li>
+                    <li></li>
+                </ul>
+            </div>
+        </div> 
+        <section id="reservationSection">
+            <h2>hiddenTitle</h2>
+            <div class="center">
+                <article>
+                    <div class="reservationTitle">
+                        <img src="img/reservation-objects.png" alt="reservationTitle">
+                        <h3>Reservation</h3>
+                    </div>
+                    <div class="reservationForm">
+                        <div class="formLine1">
+                            <label class="nameLabel" for="name"></label>
+                            <input id="name" type="text" placeholder="성함">
+                            <label id="telLabel" for="tel"></label>
+                            <input id="tel" type="text" placeholder="연락처">
+                        </div>
+                        <div class="formLine2">
+                            <div id="datepicker_box">
+                                <input type="text" id="datepicker" placeholder="연-월-일" readonly>
+                            </div>
+                            <div id="timepicker_box">
+                                <input class="timepicker" type="text" value="12:00" readonly>
+                            </div>
+                            <div id="people_box">
+                                <button>인원 선택</button>
+                                <ul id="people">
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>그 외(요청사항 입력)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <textarea name="name" cols="60" rows="5" placeholder="요청사항을 입력하세요."></textarea>
+                    </div>
+                    <button>예약하기</button>
+                </article>
+            </div>
+        </section>
+        <footer>
+            <div class="center">
+                <div class="footer-logo"><a href="index.html"><img src="img/casaDePasta.png" alt="logo"></a></div>
+                <div class="footer-info">
+                    <ul class="footer-list">
+                        <li><a href="alert.html">개인정보처리방침</a></li>
+                        <li><a href="alert.html">홈페이지 이용약관</a></li>
+                        <li><a href="alert.html">위치정보 이용약관</a></li>
+                        <li><a href="alert.html">운리경영</a></li>
+                        <li><a href="alert.html">공지사항</a></li>
+                    </ul>
+                    <span class="address">대표이사 : 유희성 | 주소 : 서울 양천구 00로 000, 000호</span>
+                    <span class="companyNumber">사업자등록번호 : 123-45-67890 | 통신판매업신고번호 : 제2022-서울강남-01234호 <a href="alert.html">사업자정보확인</a></span>
+                    <div class="copyright">copyright ⓒ CASA DE PASTA all rights reserved.</div>
+                </div>
+                <div class="footer-sns">
+                    <ul>
+                        <li><a href="alert.html"><img src="img/sns1.png" alt="instagram"></a></li>
+                        <li><a href="alert.html"><img src="img/sns2.png" alt="facebook"></a></li>
+                        <li><a href="alert.html"><img src="img/sns3.png" alt="youtube"></a></li>
+                        <li><a href="alert.html"><img src="img/sns4.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- script -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
