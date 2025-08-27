@@ -89,8 +89,8 @@ $(document).ready(function () {
         xPercent: 100,
         scrollTrigger: {
             trigger: ".mid-banner",
-            start: "top center",
-            end: "bottom center",
+            start: "top bottom",
+            end: "bottom top",
             scrub: true,
             // markers: true,
             id: "introSlide"
@@ -101,8 +101,8 @@ $(document).ready(function () {
         xPercent: -100,
         scrollTrigger: {
             trigger: ".mid-banner",
-            start: "top center",
-            end: "bottom center",
+            start: "top bottom",
+            end: "bottom top",
             scrub: true,
         },
     });
