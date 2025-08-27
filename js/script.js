@@ -88,9 +88,9 @@ $(document).ready(function () {
     var introduce1 = gsap.to(".introduceTitle1", {
         xPercent: 100,
         scrollTrigger: {
-            trigger: "#workSec",
+            trigger: ".mid-banner",
             start: "top center",
-            end: "bottom top",
+            end: "bottom center",
             scrub: true,
             // markers: true,
             id: "introSlide"
@@ -100,9 +100,9 @@ $(document).ready(function () {
     var introduce2 = gsap.to(".introduceTitle2", {
         xPercent: -100,
         scrollTrigger: {
-            trigger: "#workSec",
+            trigger: ".mid-banner",
             start: "top center",
-            end: "bottom top",
+            end: "bottom center",
             scrub: true,
         },
     });
