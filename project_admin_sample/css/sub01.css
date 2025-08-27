@@ -1,7 +1,7 @@
 .content_mainTitle{margin-bottom: 50px;}
 .order_con .content_title{width: 100%; display: flex; justify-content: space-between;}
 .order_edit{display: flex; align-items: center; gap: 5px;}
-.order_e{width: 24px; height: 24px; background: url(../img/edit_g.svg);} 
+.order_e{width: 24px; height: 24px; background: url(../img/Edit_g.svg);} 
 .order_d{width: 24px; height: 24px; background: url(../img/delete_g.svg); background-position: center;}
 .order_con{display: flex; flex-direction: column; align-items: center; margin-bottom: 50px;}
 .order_table {width: 100%; min-width: 760px; margin-bottom: 30px; border-collapse: collapse; overflow-x: scroll;}
