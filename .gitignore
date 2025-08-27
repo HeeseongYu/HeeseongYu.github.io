@@ -1,0 +1,13 @@
+Thumbs.db
+.DS_Store
+cd /c/Users/Dorang/Desktop/HeeseongYu.github.io
+
+# .gitignore 새로 생성(없어서 에러 났던 것)
+cat > .gitignore << 'EOF'
+# OS/IDE 잡파일
+Thumbs.db
+.DS_Store
+*.log
+# 빌드 산출물(있다면)
+dist/
+build/
