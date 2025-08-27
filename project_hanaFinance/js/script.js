@@ -54,30 +54,6 @@ $(document).ready(function () {
         // 반응형 뷰포트
         const isMobile = () => $(window).width() <= 1024;
 
-        function bindGnbDropdownByViewport() {
-            const isMobile = () => $(window).width() <= 1024;
-
-            // 혹시 이전 바인딩이 남아있을 수 있으므로 hover 관련 이벤트 제거
-            $(".gnb .sub, .dropDown_con").off("mouseenter mouseleave");
-
-            if (!isMobile()) {
-                // ✅ PC 전용 hover 동작
-                $(".gnb .sub, .dropDown_con").hover(function () {
-                    const idx = $(this).index();
-                    $(".header_template").addClass("headerScroll hoverTxt");
-                    $(".dropDown_con").eq(idx).stop().slideDown("fast");
-                }, function () {
-                    if ($(window).scrollTop() === 0) {
-                        $(".header_template").removeClass("headerScroll hoverTxt");
-                    }
-                    $(".dropDown_con").stop().slideUp("fast");
-                });
-            } else {
-                // ✅ 모바일에서는 드롭다운 비활성/즉시 닫힘
-                $(".dropDown_con").stop(true, true).hide();
-            }
-        }
-
         //.gnb_right>ul>li에서 mouseLeave 했을 시 드롭다운 콘텐츠가 닫히지 않게 설정
         let hideTimer;
 
@@ -200,16 +176,65 @@ $(document).ready(function () {
             });
         }  
     };
+
+    // ===================== Responsive GNB hover binding (desktop only) =====================
+    function isMobileWidth() { return $(window).width() <= 1024; }
+
+    function setupDesktopGnb() {
+        teardownMobileGnb();
+        teardownDesktopGnb();
+
+        $(".gnb .sub, .dropDown_con")
+            .on("mouseenter.gnbHover", function () {
+                const idx = $(this).index();
+                $(".header_template").addClass("headerScroll hoverTxt");
+                $(".dropDown_con").eq(idx).stop(true, true).slideDown("fast");
+            })
+            .on("mouseleave.gnbHover", function () {
+                $(".dropDown_con").stop(true, true).slideUp("fast");
+                if ($(window).scrollTop() === 0) {
+                    $(".header_template").removeClass("headerScroll hoverTxt");
+                }
+            });
+    }
+
+    function teardownDesktopGnb() {
+        $(".gnb .sub, .dropDown_con").off(".gnbHover");
+        $(".dropDown_con").stop(true, true).hide();
+        if ($(window).scrollTop() === 0) {
+            $(".header_template").removeClass("hoverTxt");
+        }
+    }
+
+    function setupMobileGnb() {
+        teardownDesktopGnb();
+        $(".dropDown_con").stop(true, true).hide();
+        $(".gnb .sub, .dropDown_con").off(".gnbHover");
+        // 모바일 네비게이션은 keyInfoResponsive()의 클릭 로직을 사용
+    }
+
+    function teardownMobileGnb() {
+        // 필요 시 모바일 전용 네임스페이스 이벤트 해제
+    }
+
+    function applyResponsiveGnb() {
+        if (isMobileWidth()) {
+            setupMobileGnb();
+        } else {h 
+            setupDesktopGnb();
+        }
+    }
+
     // 화면 리사이즈 감지 후 실행
     keyInfoResponsive();
-    bindGnbDropdownByViewport(); 
+    applyResponsiveGnb();
     let resizeTimer;
 
     $(window).on("resize", function () {
         clearTimeout(resizeTimer);        
         resizeTimer = setTimeout(() => {
             keyInfoResponsive();
-            bindGnbDropdownByViewport();
+            applyResponsiveGnb();
         }, 150);
     });
 
