@@ -1,0 +1,39 @@
+/* 메인 스와이퍼 */
+.main_banner .mainSwiper{width: 100%; height: 100%}
+.main_slide{position: relative;}
+.main_slide>img{ display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; position: absolute;}
+.main_slide .bannerImg_m{display: none;}
+.main_slide .inner{position: relative; width: 100%; height: 100%;}
+.main_slide .mainSwiper_txt{position: absolute; top: 40%; transform: translateY(-40%); width: 600px;}
+.main_slide .mainSwiper_txt img{ display: block; width: 100%;}
+
+/* 버튼 초기화&커스텀 */
+.main_inner{position: relative; width: 100%; bottom: 125px; box-sizing: border-box; z-index: 1; }
+.main_btns{background-color: rgba(0, 0, 0, .3); display:inline-flex; justify-content:flex-start; align-items: center; gap: 5px; padding: 8px 12px; border-radius: 20px;}
+.swiper-button.playing::before{display: block; width: 12px; height: 12px; margin-right: 10px; content: ''; background: url(../img/btn-pause.svg); background-repeat: no-repeat; background-size: cover; cursor: pointer;}
+.swiper-button.paused::before{display: block; width: 12px; height: 12px; margin-right: 10px; content: ''; background: url(../img/btn-play.svg);  background-repeat: no-repeat; background-size: cover; cursor: pointer;}
+.main_btns .swiper-button-next, .main_btns .swiper-button-prev { display: inline-block; width: 12px; height: 12px; position: static; transform: none; margin: 0; background-size: contain; background-repeat: no-repeat; background-position: center;}
+.main_btns .swiper-button-next{background: url(../img/btn-prev.svg);}
+.main_btns .swiper-button-prev{background: url(../img/btn-next.svg);}
+.swiper-button-prev::after,.swiper-button-next::after{ display: none; content: none;}
+.main_btns .swiper-pagination {position: static; font-size: 11px; font-weight: bold; color: #ffffff; width: 40px;}
+.swiper-pagination-total,.slash{color: rgba(255, 255, 255, 0.5);}
+
+
+/* newsSwiper */
+.news{padding: 80px 0 50px;}
+.newsSwiper{width: 100%;}
+.newsSwiper .swiper-wrapper{box-sizing: border-box; display: flex; width: 100%;}
+.newsSwiper .swiper-slide{box-sizing: border-box; width: 100%;}
+.newsSwiper .swiper-slide:last-child{padding-right: 0px;}
+.newsSwiper .swiper-slide a{box-sizing: border-box; width: 100%;}
+.newsSwiper_img{aspect-ratio: 3/2; width: 100%; overflow: hidden; border-radius: 10px; margin-bottom: 20px;}
+.newsSwiper_img img{display: block; width: 100%; height: 100%; object-fit: cover;  transition: all 0.3s;}
+.swiper-slide a:hover .newsSwiper_img img {scale: 1.1;}
+.neswSwiper_con{display: flex; flex-direction: column;}
+.neswSwiper_con .badge{margin-bottom: 10px;}
+.neswSwiper_con span{align-self: flex-start; padding: 0px 8px; font-size: 0.8rem; color: #009178; border-radius: 4px; border: 1px solid #009178;}
+.neswSwiper_con strong{ display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; text-overflow: ellipsis; font-weight: 500; margin-bottom: 40px; }
+.neswSwiper_con p{font-size: 0.85rem; color: #666666;}
+.newsSwiper .news_pagination{ display: none;}
+

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g data-name="그룹 79754">
+        <path data-name="사각형 42722" style="fill:none" d="M0 0h16v16H0z"/>
+        <g data-name="그룹 79753">
+            <path data-name="빼기 1" d="M-1983 14a7.008 7.008 0 0 1-7-7 7.008 7.008 0 0 1 7-7 7.008 7.008 0 0 1 7 7 7.018 7.018 0 0 1-7 7zm0-13a6.007 6.007 0 0 0-6 6 6.007 6.007 0 0 0 6 6 6.006 6.006 0 0 0 6-6 6.016 6.016 0 0 0-6-6z" transform="translate(1991 1)" style="stroke:transparent;stroke-miterlimit:10;fill:#fff"/>
+            <path d="M1.2 1.2H0V0h1.2z" transform="translate(7.394 10.5)" style="fill:#fff"/>
+            <path data-name="Union-path" d="M1 5.5H0V0h1z" transform="translate(7.5 4)" style="fill:#fff"/>
+        </g>
+    </g>
+</svg>

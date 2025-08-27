@@ -1,0 +1,59 @@
+/* mainSwiper */
+.swiper .mainSwiper{width: 100%;}
+.mainSwiper .swiper-slide{ display: flex; position: relative; box-sizing: border-box; background: #ffffff;}
+.mainSwiper_link{ display: block; width: 100%; box-sizing: border-box; padding: 60px 0;}
+
+/* 메인배너 배경 애니메이션 */
+.mainSwiper_link::after{ content: ''; display: block; width: 100%; height: 300px; background-color: lightblue; border-radius: 500px 0 0 500px; position: absolute; top: 50%; left: 70%; transform: translateY(-50%); z-index: -2; pointer-events: none; transition: all 0.6s; opacity: 0;}
+.mainSwiper_link.ani_before::after{ left: 43%; opacity: 1;}
+.mainSwiper_link .mainSwiper_img{ position: absolute; bottom: 20px; left: 48%; transform: translateX(-48%); display: block; width: 360px; height: 320px;}
+.mainSwiper_link .mainSwiper_img img{ display: block; width: 100%;}
+.swiper_con{width: 100%;text-align: left;}
+.mainSwiper .swiper_con .tit{margin-bottom: 25px;}
+.mainSwiper .swiper_con .tit h1{font-size: 2.7rem; font-weight: bolder;}
+.mainSwiper .swiper_con p{font-size: 1.1rem;}
+.mainSwiper .swiper_con .mainSwiper_detail{ display: inline-block; border: 1px solid #7c889f;  background-color: #ffffff;  padding: 9px 16px; border-radius: 10px; font-size: 0.9rem; font-weight: 500; margin: 40px 0;}
+
+/* 버튼 커스텀 */
+.mainSwiper_btns{ position: absolute; bottom: 10px; left: 50%; transform: translate(-50%); width: 100%; display: flex; align-items: center; gap: 10px; color: #333a46; font-size: 1rem; font-weight: bold; width: 1270px; z-index: 5;}
+.mainSwiper_btns .swiper-button-next,
+.mainSwiper_btns .swiper-button-prev { position: unset; width: fit-content; height: fit-content; margin: 0;}
+.mainSwiper_btns .swiper-button-prev::after{ content: ''; background: url(../img/mainbnr_prev_pc-BkZicXLS.svg); background-size: cover; display: block; width: 25px;  height: 25px;}
+.mainSwiper_btns .swiper-button-next::after{ content: ''; background: url(../img/mainbnr_next_pc-DloLdAnL.svg); background-size: cover; display: block; width: 25px; height: 25px;}
+.swiper-pagination{ position: unset; display: inline-flex; width: fit-content; align-items: center; font-size: 1rem; font-weight: bold; color: #333; top:inherit; bottom:inherit;}
+.fraction-wrapper {display: flex;gap: 2px;font-size: 0.9rem;}
+.mainSwiper .autoplay-progress { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; cursor: pointer; z-index: 10;}
+.mainSwiper .autoplay-progress.play{ background: url(../img/mainbnr_play_pc-D7zU14is.svg); background-repeat: no-repeat; background-position: center;}
+.mainSwiper .autoplay-progress.pause{ background: url(../img/mainbnr_pause_pc-BDDzKHX-.svg); background-repeat: no-repeat; background-position: center}
+.mainSwiper .autoplay-progress svg { --progress: 0; width: 100%; height: 100%; stroke: #191e26; stroke-width: 4px; fill: none; stroke-dashoffset: calc(125.6px * (1 - var(--progress))); stroke-dasharray: 125.6; transform: rotate(-90deg); z-index: 10;}
+.autoplay-progress svg circle.progress-bg{ stroke-dashoffset: 0; stroke-dasharray: 0; stroke: #e1e5ec;}
+
+/* tabSwiper */
+.swiper.tabSwiper{ display: none; position: relative; overflow: visible;}
+.swiper.tabSwiper.tab_on{ display: block; width: 100%;}
+.tabSwiper .swiper-wrapper .swiper-slide{ box-sizing: border-box; padding-top: 20px;}
+
+.swiper-wrapper .swiper-slide .service_con{ width: 100%; font-size: 18px; overflow: visible;}
+.swiper-wrapper .swiper-slide .service_con a{ transition: transform 0.3s ease-in-out; position: relative; display: block; width: 100%; height: fit-content; box-sizing: border-box; padding: 40px; color: #333a46; background: #ffffff;   border: 1px solid #e1e5ec; border-radius: 30px; text-align: left; font-weight: 500;}
+.service_con a strong{ font-size: 1.3rem; font-weight: bolder; color: #191e26;}
+.service_con a p{ font-size: 0.9rem; margin-top: 15px; color:#656f83;}
+.service_con a .inTabBtn{ display: inline-block; margin-top: 60px; box-sizing: border-box; padding: 10px 20px; border-radius: 10px; font-weight: bold;  background-color: #007ef4; color: #ffffff; font-size: 0.85rem;}
+.service_con a img{ width: 90px; height: 90px; position: absolute; bottom: 40px; right: 40px;}
+
+.tabSwiper .swiper-slide:hover .service_con a{ bottom: 10px; transform: translateY(-10px); color: #ffffff; background-color: #007ef4;}
+.tabSwiper .swiper-slide:hover .service_con a img{display: none;}
+.tabSwiper .swiper-slide:hover .service_con a strong,
+.tabSwiper .swiper-slide:hover .service_con a p{color: #ffffff;}
+.tabSwiper .swiper-slide:hover .service_con a .inTabBtn{ background-color: #ffffff; color: #007ef4;}
+
+/* 버튼 커스텀 */
+.tabSwiper_btns{ display: inline-flex; gap: 8px; position: absolute; top: -50px; right: 0;}
+.tabSwiper_btns .swiper-button-next,.swiper-button-prev { position: static; width: 40px; height: 40px; margin-top: 0; z-index: 10; cursor: pointer; display: flex; align-items: center; justify-content: center }
+.tabSwiper_btns .swiper-button-next::after{ content: ''; display: block; width: 40px; height: 40px; background: url(../img/ico_good_next-Ey2UGBPP.svg); background-size: cover;}
+.tabSwiper_btns .swiper-button-prev::after{ content: ''; display: block; width: 40px; height: 40px; background: url(../img/ico_good_next-Ey2UGBPP.svg); background-size: cover; transform: rotate(-180deg);}
+
+/* 비활성 버튼 배경 적용 */
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled{opacity: 100%;}
+.swiper-button-next.swiper-button-disabled::after{ background: url(../img/ico_good_next_disabled-BuYgsi6m.svg); transform: rotate(180deg);}
+.swiper-button-prev.swiper-button-disabled::after{ background: url(../img/ico_good_next_disabled-BuYgsi6m.svg); transform: rotate(0);}
