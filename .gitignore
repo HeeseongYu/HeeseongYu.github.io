@@ -11,3 +11,8 @@ Thumbs.db
 # 빌드 산출물(있다면)
 dist/
 build/
+# OS/IDE
+Thumbs.db
+.DS_Store
+.vscode/
+*.log
