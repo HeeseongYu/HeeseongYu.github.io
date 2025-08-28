@@ -48,7 +48,7 @@ $(document).ready(function () {
         $(".dropDown_con").stop().slideUp("fast");
     });
 
-
+    
     // 오른쪽 gnb의 드롭다운 요소들에 할당된 호버와 클릭 함수를 한 데 묶어 반응형 적용 시 제어하기   
     function keyInfoResponsive() {
         // 반응형 뷰포트
@@ -60,6 +60,7 @@ $(document).ready(function () {
         // 기존 이벤트 초기화
         $(".hana_network_btn, .language_btn, .menuAll_btn, .menuAll_close, .gnb_right_drop_con").off();      
         $(".key_info_btn, .key_info_close, .key_info_con").off();
+        $(".menuAll_btn, .menuAll_tab ul li, .tab_down").off("click"); //모바일 전체메뉴 토글,탭 중복바인딩 방지
         $(".key_info_con").removeAttr("style").hide();  // display none
         $(".footer_customerInfo").removeAttr("style");  // display none 제거
         $("body").removeClass("scroll_lock");
