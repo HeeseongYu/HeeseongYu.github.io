@@ -118,6 +118,7 @@ button{
     font-size:18px;
     background: transparent;
     border: 2px solid black;
+    color: black;
 }
 .share_contents{width: 100%;}
 .share_articles_row1{
