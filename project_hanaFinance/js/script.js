@@ -61,7 +61,7 @@ $(document).ready(function () {
         $(".hana_network_btn, .language_btn, .menuAll_btn, .menuAll_close, .gnb_right_drop_con").off();      
         $(".key_info_btn, .key_info_close, .key_info_con").off();
         $(".menuAll_btn, .menuAll_tab ul li, .tab_down").off("click"); //모바일 전체메뉴 토글,탭 중복바인딩 방지
-        $(".key_info_con").removeAttr("style").hide();  // display none
+        $(".key_info_con").removeAttr("style").hide();  // display none 처리
         $(".footer_customerInfo").removeAttr("style");  // display none 제거
         $("body").removeClass("scroll_lock");
 
