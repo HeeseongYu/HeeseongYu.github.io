@@ -233,6 +233,7 @@ $(document).ready(function () {
             $(".topBtn").removeClass("fixed");
         }
     });
+    
     $(".topBtn").click(function () {
         $("html,body").animate({ scrollTop: 0 }, 500);
         return false;
