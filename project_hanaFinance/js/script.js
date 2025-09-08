@@ -393,8 +393,8 @@ $(document).ready(function () {
                 $(".hana_network_con").stop().slideUp("fast");
                 if ($(window).scrollTop() === 0) {
                     $(".header_template").removeClass("headerScroll hoverTxt");
-                    
                 }
+                $(".dimmer").stop().fadeOut(300);
             });
             
             // 언어 드롭다운 토글
@@ -415,14 +415,14 @@ $(document).ready(function () {
     };
     // 화면 리사이즈 감지 후 실행
     keyInfoResponsive();
-    // let resizeTimer;
+    let resizeTimer;
 
-    // $(window).on("resize", function () {
-    //     clearTimeout(resizeTimer);
-    //     resizeTimer = setTimeout(() => {
-    //         keyInfoResponsive();
-    //     }, 150);
-    // });
+    $(window).on("resize", function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            keyInfoResponsive();
+        }, 200);
+    });
 
     // 푸터 리스트 토글
     $(".footer_li button").click(function () {
