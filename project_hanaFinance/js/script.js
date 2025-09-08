@@ -421,7 +421,7 @@ $(document).ready(function () {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
             keyInfoResponsive();
-        }, 200);
+        }, 150);
     });
 
     // 푸터 리스트 토글
